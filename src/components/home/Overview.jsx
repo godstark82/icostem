@@ -36,15 +36,15 @@ export default function Overview() {
                     <div className="md:w-1/3">
                         <div className="flex flex-row gap-4 justify-center">
                             {CHAIRS.map((chair, idx) => (
-                                <div key={chair.name} className="flex flex-col items-center bg-light rounded-lg shadow p-4 w-48">
+                                <div key={chair.name} className="flex flex-col items-start bg-light p-4 w-48">
                                     <img
                                         src={chair.img}
                                         alt={chair.name}
-                                        className="w-28 h-28 object-cover rounded-md mb-2 border-4 border-[#E5E5E5]"
+                                        className="w-full h-48 sm:h-56 md:h-48 object-cover rounded-md mb-2"
                                     />
-                                    <div className="w-12 h-1 bg-secondary rounded mb-2"></div>
-                                    <div className="text-primary font-bold text-sm text-center leading-tight">{chair.name}</div>
-                                    <div className="text-xs text-gray-700 text-center">{chair.title}</div>
+                                    <div className="w-12 h-2 bg-primary mb-2"></div>
+                                    <div className="text-secondary font-bold text-sm leading-tight">{chair.name}</div>
+                                    <div className="text-xs text-gray-700">{chair.title}</div>
                                 </div>
                             ))}
                         </div>
