@@ -9,12 +9,16 @@ const Header = () => {
     const links = {
         "HOME": "HOME",
         "ABOUT": {
-            "ABOUT UNI": 'ABOUT UNIVERSITY'
+            "UTB": 'UTB',
+            'IMPORTANT DATES': 'IMPORTANT DATES',
+            'PROGRAMME': 'PROGRAMME',
+            'ACCOMONDATION OPTIONS': 'ACCOMONDATION OPTIONS'
         },
         "COMMITTEES": {
-            "TECH COMMITTEE": "TECH COMMITTEE",
-            "PUBLICATION COMMITTEE": "PUBLICATION COMMITTEE",
+            "CONFERENCE CHAIR": "CONFERENCE CHAIR",
             "ORGANIZING COMMITTEE": "ORGANIZING COMMITTEE",
+            "REVIEW COMMITTEE": "REVIEW COMMITTEE",
+            "OTHER COMMITTEES": "OTHER COMMITTEES",
         },
         "REGISTRATION": "REGISTRATION",
         "UPLOAD PAPER": "UPLOAD PAPER",
