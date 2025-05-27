@@ -1,4 +1,4 @@
-import SectionImageHeader from "@/components/common/SectionImageHeader";
+import SectionImageHeader from "../common/SectionImageHeader";
 
 const SPEAKERS = [
     {

@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/common/SectionHeader";
+import SectionHeader from "../common/SectionHeader";
 
 const CHAIRS = [
     {

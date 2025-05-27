@@ -1,5 +1,5 @@
-import SectionHeader from "@/components/common/SectionHeader";
-import SectionImageHeader from "@/components/common/SectionImageHeader";
+import SectionHeader from "../components/common/SectionHeader";
+import SectionImageHeader from "../components/common/SectionImageHeader";
 const DATES = [
     { day: "15", month: "July", desc: "Abstract Submission Deadline" },
     { day: "15", month: "July", desc: "Last Day of Early Bird Registration" },

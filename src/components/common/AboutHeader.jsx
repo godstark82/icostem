@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutHeader({ title = 'University Profile', date = '14 - 15 October', image = '/images/simdte-white-lg.png', overlayColor = '#d0224a', bgImage = '/images/utb-images/gallery/gallery-2.jpg' }) {
+export default function AboutHeader({ title = 'University Profile', date = '14 - 15 October', image = '/images/simdte-white-lg.png', overlayColor = '#d0224a', bgImage = '/images/utb-images/gallery/gallery-2.jpg', dividerColor = 'white' }) {
     return (
         <div style={
             {
@@ -36,7 +36,7 @@ export default function AboutHeader({ title = 'University Profile', date = '14 -
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-center md:text-left">
                             {title}
                         </h1>
-                        <div className="h-1.5 md:h-2 w-20 md:w-24 bg-white mt-3 md:mt-4"></div>
+                        <div className={`h-1.5 md:h-2 w-20 md:w-24 bg-${dividerColor} mt-3 md:mt-4`}></div>
                     </div>
                     <div className="outline-white outline bg-white px-3 py-1 text-xl md:text-2xl lg:text-3xl font-bold text-primary">
                         {date}

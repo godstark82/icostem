@@ -1,5 +1,5 @@
-import AboutHeader from '@/components/common/AboutHeader';
-import SectionHeader from '@/components/common/SectionHeader';
+import AboutHeader from '../../../components/common/AboutHeader';
+import SectionHeader from '../../../components/common/SectionHeader';
 
 export default function AboutUTBPage() {
     return (
