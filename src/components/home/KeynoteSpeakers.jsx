@@ -25,24 +25,6 @@ const SPEAKERS = [
         country: "India",
         img: "/images/speakers/prof-narendra.jpeg",
     },
-    {
-        name: "Prof Pradeep Upadhyay",
-        affiliation: "NIET, NIMS University, Jaipur",
-        country: "India",
-        img: "/images/speakers/pradeep-upadhyay.png",
-    },
-    {
-        name: "Dr. Ilona Pawelosek",
-        affiliation: "Czestochowa University of Technology",
-        country: "Poland",
-        img: "/images/speakers/dr-illona.jpeg",
-    },
-    {
-        name: "Dr. Aman Sharma",
-        affiliation: "NIMS University",
-        country: "Jaipur",
-        img: "/images/speakers/aman.jpeg",
-    },
 ];
 
 function SpeakerCard({ speaker }) {
