@@ -17,7 +17,7 @@ const SPEAKERS = [
         name: "Prof Magdalena Rzemieniak",
         affiliation: "Lublin University of Technology",
         country: "Poland",
-        img: "/images/speakers/prof-magdelena.jpeg",
+        img: "/images/speakers/prof-magdelena.jpeg"
     },
     {
         name: "Prof Narendra Kumar",
