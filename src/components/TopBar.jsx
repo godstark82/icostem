@@ -1,27 +1,19 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaClock, FaPhone, FaPhoneAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaClock, FaPhoneAlt } from 'react-icons/fa';
 
 const TopBar = () => {
-    const [currentTime, setCurrentTime] = useState('');
-
-    useEffect(() => {
-        const updateTime = () => {
-            const now = new Date();
-            setCurrentTime(now.toLocaleTimeString());
-        };
-
-        updateTime();
-        const interval = setInterval(updateTime, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
+    const now = new Date();
+    const dateString = now.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric', 
+        month: 'long',
+        day: 'numeric'
+    });
 
     return (
         <div className="bg-[#E5E5E5] text-light py-1 w-full">
             <div className="flex justify-between items-center w-full px-12">
                 <div className="text-sm">
-                    <FaClock className="inline-block mr-2 bg-primary text-white rounded h-5 w-5 p-1" /> {currentTime}
+                    <FaClock className="inline-block mr-2 bg-primary text-white rounded h-5 w-5 p-1" /> {dateString}
                 </div>
                 <div className="flex items-center space-x-4">
                     <div className="text-sm flex items-center">   

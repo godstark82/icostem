@@ -1,11 +1,6 @@
-'use client';
 import Link from 'next/link';
-import { useState, useRef } from 'react';
 
 const Header = () => {
-    const [hoveredItem, setHoveredItem] = useState(null);
-    const timeoutRef = useRef(null);
-
     const links = {
         "HOME": "HOME",
         "ABOUT": {
@@ -25,19 +20,6 @@ const Header = () => {
         "DOWNLOADS": "DOWNLOADS",
         "CONTACT US": "CONTACT US"
     }
-
-    const handleMouseEnter = (key) => {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-        setHoveredItem(key);
-    };
-
-    const handleMouseLeave = () => {
-        timeoutRef.current = setTimeout(() => {
-            setHoveredItem(null);
-        }, 100);
-    };
 
     return (
         <header className="bg-light shadow-md">
@@ -64,14 +46,12 @@ const Header = () => {
                                 return (
                                     <div
                                         key={key}
-                                        className="relative"
-                                        onMouseEnter={() => handleMouseEnter(key)}
-                                        onMouseLeave={handleMouseLeave}
+                                        className="relative group"
                                     >
                                         <button className="text-black hover:text-secondary transition-colors font-bold flex items-center gap-1">
                                             {key}
                                             <svg
-                                                className={`w-4 h-4 transition-transform duration-200 ${hoveredItem === key ? 'rotate-180' : ''}`}
+                                                className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -84,24 +64,17 @@ const Header = () => {
                                                 />
                                             </svg>
                                         </button>
-                                        {hoveredItem === key && (
-                                            <div
-                                                className="absolute border border-gray-300 top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 z-50"
-                                                onMouseEnter={() => handleMouseEnter(key)}
-                                                onMouseLeave={handleMouseLeave}
-                                            >
-                                                {Object.entries(value).map(([subKey, subValue]) => (
-                                                    <Link
-                                                        key={subKey}
-                                                        href={`/${key.toLowerCase().replace(/\s+/g, '-')}/${subKey.toLowerCase().replace(/\s+/g, '-')}`}
-                                                        className="block px-4 py-2 text-sm text-gray-700 font-bold hover:bg-gray-100"
-                                                        onClick={() => setHoveredItem(null)}
-                                                    >
-                                                        {subValue}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
+                                        <div className="invisible group-hover:visible absolute border border-gray-300 top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 z-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                            {Object.entries(value).map(([subKey, subValue]) => (
+                                                <Link
+                                                    key={subKey}
+                                                    href={`/${key.toLowerCase().replace(/\s+/g, '-')}/${subKey.toLowerCase().replace(/\s+/g, '-')}`}
+                                                    className="block px-4 py-2 text-sm text-gray-700 font-bold hover:bg-gray-100"
+                                                >
+                                                    {subValue}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 );
                             }

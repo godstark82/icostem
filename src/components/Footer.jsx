@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaEnvelope } from 'react-icons/fa';
 
@@ -79,6 +78,11 @@ const Footer = () => {
                             <li>
                                 <Link href="/contact" className="text-light/80 hover:text-white transition-colors">
                                     Contact Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/admin" className="text-light/80 hover:text-white transition-colors">
+                                    Administrator
                                 </Link>
                             </li>
                         </ul>
