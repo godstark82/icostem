@@ -29,7 +29,7 @@ export default function AdminDashboard() {
             setPapers(papersData);
 
             // Fetch users (if you have a users collection)
-            const usersQuery = query(collection(db, 'registrations'), orderBy('registration_date', 'desc'));
+            const usersQuery = query(collection(db, 'registrations'));
             const usersSnapshot = await getDocs(usersQuery);
             const usersData = usersSnapshot.docs.map(doc => ({
                 id: doc.id,

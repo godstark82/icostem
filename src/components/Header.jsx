@@ -6,7 +6,7 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const links = {
-        "HOME": "HOME",
+        "/": "HOME",
         "ABOUT": {
             "UTB": 'UTB',
             'IMPORTANT DATES': 'IMPORTANT DATES',

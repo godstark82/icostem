@@ -1,5 +1,5 @@
-import SectionHeader from "../components/common/SectionHeader";
-import SectionImageHeader from "../components/common/SectionImageHeader";
+import SectionHeader from "../common/SectionHeader";
+import SectionImageHeader from "../common/SectionImageHeader";
 
 const DATES = [
     { day: "15", month: "July", desc: "Abstract Submission Deadline" },
@@ -17,7 +17,7 @@ export default function ImportantDates() {
             <SectionImageHeader title="Important Dates" image="/images/imp-dates.jpg" />
             {/* Dates Grid */}
             <div className="container mx-auto px-4 py-8 md:py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-8">
                     {DATES.map((date, idx) => (
                         <div key={idx} className="flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
                             <div className="bg-primary text-white rounded-t-md rounded-b-none px-4 py-4 text-center relative w-full max-w-[200px]">

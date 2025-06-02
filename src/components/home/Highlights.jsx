@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PHOTOS = [
     "/images/utb-images/gallery/gallery-12.jpg",
-    "/images/utb-images/gallery/gallery-11.jpg",
+    "/images/utb-images/gallery/gallery-11.jpg", 
     "/images/utb-images/gallery/gallery-7.jpg",
     "/images/utb-images/gallery/gallery-6.jpg",
     "/images/utb-images/gallery/gallery-3.jpg",
@@ -21,9 +21,8 @@ export default function Highlights() {
                         <iframe
                             width="100%"
                             height="100%"
-                            src="https://www.youtube-nocookie.com/embed/e8muT9UCDWI?si=JSbg19SdG_xdtAQh" // Replace with actual video
+                            src="https://www.youtube-nocookie.com/embed/e8muT9UCDWI?si=JSbg19SdG_xdtAQh"
                             title="YouTube video player"
-                            
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                             className="w-full h-full rounded-md shadow-lg"
@@ -33,14 +32,15 @@ export default function Highlights() {
                 {/* Photo Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {PHOTOS.map((src, idx) => (
-                        <div key={idx} className="w-full h-56 md:h-48 lg:h-56 overflow-hidden rounded-md">
-                            <img
+                        <div key={idx} className="relative w-full h-56 md:h-48 lg:h-56 overflow-hidden rounded-md">
+                            <Image
                                 src={src}
-                                // width={100}
-                                // height={100}
-                                // quality={100}
                                 alt={`Conference highlight ${idx + 1}`}
-                                className="w-full h-full object-cover"
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                                priority={idx < 2}
+                                className="object-cover"
+                                quality={75}
                             />
                         </div>
                     ))}

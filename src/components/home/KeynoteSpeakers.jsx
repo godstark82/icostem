@@ -52,7 +52,7 @@ export default function KeynoteSpeakers() {
         <section className="bg-white">
             <SectionImageHeader title="Keynote Speakers" image="/images/speakers-bg.jpg" />
             <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
                     {SPEAKERS.map((speaker, idx) => (
                         <SpeakerCard key={speaker.name} speaker={speaker} />
                     ))}

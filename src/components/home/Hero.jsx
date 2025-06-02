@@ -1,3 +1,4 @@
+'use client'
 export default function Hero() {
     return (
         <div className="bg-secondary pb-4">
@@ -9,9 +10,9 @@ export default function Hero() {
                         className="max-w-[280px] md:max-w-xl w-full h-auto"
                     />
                 </div>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="text-center text-white w-full md:w-auto">
-                        <button className="border border-white text-light px-6 py-2 hover:bg-white hover:text-secondary transition-colors w-full md:w-auto">
+                        <button className="border border-white text-light px-6 py-2 hover:bg-white hover:text-secondary transition-colors w-full md:w-auto" onClick={() => window.location.href = '/upload-paper'}>
                             Submit Paper
                         </button>
                     </div>

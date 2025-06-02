@@ -47,7 +47,7 @@ export default function ContactUsPage() {
                     <div className="flex-1 min-h-[300px]">
                         <iframe
                             title="UTB Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.073964479836!2d50.54331731501044!3d26.16913298344595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a7b2e2e2e2e3%3A0x7b2e2e2e2e2e2e2e!2sUniversity%20of%20Technology%20Bahrain!5e0!3m2!1sen!2sbh!4v1680000000000!5m2!1sen!2sbh"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3979802536014!2d50.519179799999996!3d26.183729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afd12fdcfc07%3A0x7dc8a621795a72f3!2sUniversity%20of%20Technology%20Bahrain%20-%20UTB!5e0!3m2!1sen!2sin!4v1748862272030!5m2!1sen!2sin"
                             width="100%"
                             height="350"
                             style={{ border: 0 }}

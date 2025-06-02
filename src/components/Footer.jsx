@@ -43,7 +43,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/utb" className="text-light/80 hover:text-primary transition-colors block">
-                                    University of Bahrain (UTB)
+                                    University of Technology Bahrain (UTB)
                                 </Link>
                             </li>
                             <li>
@@ -97,7 +97,7 @@ const Footer = () => {
                         <h3 className="text-xl font-bold text-white">Conference Venue</h3>
                         <div className="aspect-w-16 aspect-h-9 w-full">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.5383289183897!2d50.5487!3d26.1528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA5JzEwLjEiTiA1MMKwMzInNTUuMyJF!5e0!3m2!1sen!2sbh!4v1234567890!5m2!1sen!2sbh"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.8211172197557!2d50.57360839999999!3d26.235001299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a58a8576d17d%3A0x6d01fa2c1f7633e6!2sInterContinental%20Bahrain%2C%20an%20IHG%20Hotel!5e0!3m2!1sen!2sin!4v1748862133696!5m2!1sen!2sin"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0 }}
