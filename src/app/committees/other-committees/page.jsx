@@ -37,7 +37,7 @@ const itSupportCommittee = [
 const financialSupportCommittee = [
     { name: "Mr Elson Samuel", role: "Accounts, UTB" },
     { name: "Aditya Paresh Kothari", role: "Accounts, UTB" },
-    { name: "Ms Rosemarie Rosales", role: "Procurement, UTB" },
+    { name: "Ms Rosemarie Rosales", role: "Procurement, UTB" }
 ];
 
 const Section = ({ title, members }) => (
@@ -62,8 +62,8 @@ export default function OtherCommitteesPage() {
             <div className="max-w-7xl mx-auto px-4 py-12">
                 <Section title="Registration Committee" members={registrationCommittee} />
                 <Section title="PR & Marketing Committee" members={prMarketingCommittee} />
-                <Section title="IT Support Committe" members={itSupportCommittee} />
-                <Section title="Financial Support & Logistic Committee" members={financialSupportCommittee} />
+                <Section title="IT Support Committee" members={itSupportCommittee} />
+                <Section title="Financial Support & Logistics Committee" members={financialSupportCommittee} />
             </div>
         </div>
     );
