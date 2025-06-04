@@ -23,7 +23,7 @@ const TopBar = () => {
                             <span className='text-black font-bold'><a href="https://wa.me/97333926076">+973 33926076</a></span>
                         </div>
                         <div className="flex space-x-2">
-                            <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
+                            <a href="https://facebook.com " target='_blank' className="hover:text-secondary transition-colors" aria-label="Facebook">
                                 <FaFacebook className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
                             </a>
                             <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
