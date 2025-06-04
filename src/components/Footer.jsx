@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaFacebookF, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -9,15 +9,17 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold text-white">Address</h3>
                         <ul className="space-y-3 text-light/80">
-                            <li>123 Conference Street</li>
-                            <li>Manama, Bahrain</li>
+                            <li className='flex items-center gap-2'>
+                                <FaMapMarkerAlt className="text-primary size-7" />
+                                <p>University of Technology Bahrain, Building 829, Road 1213, Block 712, Salmabad, Kingdom of Bahrain</p>
+                            </li>
                             <li className="flex items-center gap-2">
                                 <FaPhone className="text-primary" />
-                                <span>+973 1234 5678</span>
+                                <a href="https://wa.me/97333926076"><span>+973 33926076</span></a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaEnvelope className="text-primary" />
-                                <span>conference@utb.edu.bh</span>
+                                <span><a href="mailto:simdte@utb.edu.bh">simdte@utb.edu.bh</a></span>
                             </li>
                             <div className="flex space-x-4 pt-2">
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">

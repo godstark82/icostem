@@ -17,7 +17,7 @@ const hotels = [
         name: "Ibis",
         image: "/images/hotels/ibis.jpg",
         link: "https://all.accor.com/hotel/6702/index.en.shtml",
-        note: "*Prior to booking, email <a href='mailto:Vanessa.vaquilar@accor.com'>Vanessa.vaquilar@accor.com</a> or WhatsApp +973 35358850",
+        note: "*Prior to booking, email <b><a href='mailto:Vanessa.vaquilar@accor.com'>Vanessa.vaquilar@accor.com</a></b> or <b><a href='https://wa.me/97335358850'>WhatsApp +973 35358850</a></b>",
     },
 ];
 
@@ -35,12 +35,12 @@ export default function AccommodationOptionsPage() {
             <div className="max-w-6xl mx-auto px-4 py-12">
                 <div className="mb-8 text-lg text-gray-900">
                     <p className="mb-4">
-                        We are pleased to offer our accommodation options for delegates attending Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025), hosted by the University of Technology Bahrain (UTB).
+                        We are pleased to offer our accommodation options for delegates attending <b>Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025)</b>, hosted by the <b>University of Technology Bahrain (UTB)</b>.
                     </p>
                     <p className="mb-4">
                         To ensure a comfortable and convenient stay, UTB has partnered with some hotels located within close proximity to the conference venue and UTB. These hotels offer a range of amenities and price points to suit various preferences and budgets.
                     </p>
-                    <ul className="list-disc ml-8 mb-4">
+                    <ul className="list-disc font-bold ml-8 mb-4">
                         <li>Hotels with exclusive rates for SIMDTE 2025 participants</li>
                         <li>Walking distance or short drive to the conference venue</li>
                         <li>Options ranging from budget to premium accommodation</li>

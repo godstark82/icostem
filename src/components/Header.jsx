@@ -9,15 +9,15 @@ const Header = () => {
         "/": "HOME",
         "ABOUT": {
             "UTB": 'UTB',
-            'IMPORTANT DATES': 'IMPORTANT DATES',
-            'PROGRAMME': 'PROGRAMME',
-            'ACCOMONDATION OPTIONS': 'ACCOMONDATION OPTIONS'
+            'Important Dates': 'Important Dates',
+            'Programme': 'Programme',
+            'Accomondation Options': 'Accomondation Options'
         },
         "COMMITTEES": {
-            "CONFERENCE CHAIR": "CONFERENCE CHAIR",
-            "ORGANIZING COMMITTEE": "ORGANIZING COMMITTEE",
-            "REVIEW COMMITTEE": "REVIEW COMMITTEE",
-            "OTHER COMMITTEES": "OTHER COMMITTEES",
+            "Conference Chair": "Conference Chair",
+            "Organizing Committee": "Organizing Committee",
+            "Review Committee": "Review Committee",
+            "Other Committees": "Other Committees",
         },
         "REGISTRATION": "REGISTRATION",
         "UPLOAD PAPER": "UPLOAD PAPER",

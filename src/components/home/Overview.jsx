@@ -26,7 +26,7 @@ export default function Overview() {
                             The second edition of the International Conference on Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE), organised by the College of Administrative and Financial Sciences at the University of Technology Bahrain (UTB), will focus on advancing creative thinking in management and informatics within the context of digital business transformation. Anchored in the goals of Bahrain Vision 2030, the conference seeks to address contemporary business and technological challenges through rigorous academic dialogue and research-driven inquiry.
                         </p>
                         <p>
-                            Bringing together scholars, practitioners, and industry leaders, the conference will serve as a platform for the exchange of knowledge, the presentation of innovative ideas, and the exploration of forward-thinking solutions through engaging panel and keynote discussions.
+                        Bringing together scholars, practitioners, and industry leaders, the conference will serve as a platform for the exchange of knowledge, the presentation of innovative ideas, and the exploration of forward-thinking solutions through engaging panel and keynote discussions.
                         </p>
                         <p>
                             This dynamic gathering aims to spark intellectual curiosity, drive impactful research, and cultivate meaningful collaborations that contribute to sustainable progress in business and technology.

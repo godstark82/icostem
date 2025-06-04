@@ -4,10 +4,10 @@ import CommitteeMemberGrid from "../../../components/common/CommitteeMemberGrid"
 
 
 const organizingCommitteeMembers = [
-    { name: "Dr Jayendra Shankar", role: "CAFS, UTB" },
+    { name: "Prof Jayendra Shankar", role: "CAFS, UTB" },
     { name: "Ms Mariam Alsalman", role: "CAFS, UTB" },
-    { name: "Dr Farheen Akram", role: "CAFS, UTB" },
-    { name: "Dr Omar Ahmed Alhawi", role: "DSA, UTB" },
+    { name: "Prof Farheen Akram", role: "CAFS, UTB" },
+    { name: "Prof Omar Ahmed Alhawi", role: "DSA, UTB" },
     { name: "Mr Amer Bittar", role: "MarCom, UTB" },
     { name: "Ms Rosemarie Rosales", role: "Procurement, UTB" },
     { name: "Ms Faten Obaidat", role: "VPAA Office, UTB" },
