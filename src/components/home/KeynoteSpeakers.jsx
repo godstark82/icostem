@@ -11,7 +11,7 @@ const SPEAKERS = [
         name: "Prof Dorota Jelonek",
         affiliation: "Czestochowa University of Technology",
         country: "Poland",
-        img: "/images/speakers/prof-dorota2.jpeg",
+        img: "/images/speakers/prof-dorota.jpeg",
     },
     {
         name: "Prof Magdalena Rzemieniak",
