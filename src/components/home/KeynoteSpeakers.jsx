@@ -23,18 +23,18 @@ const SPEAKERS = [
         name: "Prof Narendra Kumar",
         affiliation: "NIET, NIMS University, Jaipur",
         country: "India",
-        img: "/images/speakers/prof-narendra.jpeg",
+        img: "/images/speakers/dr-narendra.jpeg",
     },
 ];
 
 function SpeakerCard({ speaker }) {
     return (
         <div className="bg-[#232335] rounded-md overflow-hidden shadow-md flex flex-col w-[150px] sm:w-[220px] md:w-[275px]">
-            <div className="h-[150px] sm:h-[220px] md:h-[275px]">
+            <div className="h-[150px] sm:h-[220px] md:h-[300px] overflow-hidden">
                 <img
                     src={speaker.img}
                     alt={speaker.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full "
                 />
             </div>
             <div className="bg-[#232335] text-white p-3">

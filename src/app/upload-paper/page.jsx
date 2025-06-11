@@ -6,12 +6,13 @@ const guidelines = [
     {
         label: "Manuscript Format: MS Word, following the ",
         linkText: "SIMDTE 2025 Template",
-        link: "/downloads/manuscript-template.docx",
+        link: "/downloads/template.docx",
     },
     {
         label: "Submission System: ",
         linkText: "Upload Paper Portal.",
-        link: "#",
+        link: "#submit-paper",
+        target: "_self",
     },
     {
         label: "Review Process: Double-blind peer review",
@@ -146,7 +147,7 @@ export default function UploadPaperPage() {
                 dividerColor="primary"
             />
             <div className="max-w-5xl mx-auto px-4 py-12">
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center gap-4 mb-4">
                     <img src="/images/scopus-logo-hero.png" alt="Scopus" className="h-12 object-contain" />
                 </div>
                 <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submission Guidelines</div>
@@ -159,7 +160,7 @@ export default function UploadPaperPage() {
                             <li key={idx} className="mb-2">
                                 {g.label}
                                 {g.link && (
-                                    <a href={g.link} className="text-primary underline ml-1" target="_blank" rel="noopener noreferrer">{g.linkText}</a>
+                                    <a href={g.link} className="text-primary underline ml-1" target={g.target || "_blank"} rel="noopener noreferrer">{g.linkText}</a>
                                 )}
                             </li>
                         ))}
@@ -168,7 +169,62 @@ export default function UploadPaperPage() {
                     <p className="mb-2">To confirm inclusion in the proceedings, authors must complete registration and payment via the Payment Link upon acceptance.</p>
                     <p>Non-paper attendees can proceed to the payment link to register.</p>
                 </div>
-                <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submit Your Paper
+                <div className="flex justify-center gap-4 mb-4">
+                    <img src="/images/cope.jpg" alt="COPE" className="h-20 object-contain" />
+                </div>
+                <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">COPE Guidelines</div>
+                <div className="mb-8 text-gray-900">
+                    <h2 className="font-semibold mb-4">1. Introduction</h2>
+                    <p className="mb-4">
+                        The Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025) is committed to upholding the highest standards of publication ethics. We adhere to the principles outlined by the Committee on Publication Ethics (COPE) to ensure the integrity of academic work presented and published through our platform.
+                    </p>
+
+                    <h2 className="font-semibold mb-4">2. Responsibilities of Authors</h2>
+                    <ul className="list-disc ml-8 mb-4">
+                        <li>Originality: Submissions must be original and not under consideration elsewhere.</li>
+                        <li>Plagiarism: All manuscripts will be screened for plagiarism. Any form of plagiarism will result in rejection.</li>
+                        <li>Authorship: All listed authors must have made significant contributions to the research.</li>
+                        <li>Disclosure: Authors must disclose any conflicts of interest or funding sources.</li>
+                        <li>Corrections: Authors are obliged to promptly notify the editors of any errors discovered post-submission or post-publication.</li>
+                    </ul>
+
+                    <h2 className="font-semibold mb-4">3. Responsibilities of Reviewers</h2>
+                    <ul className="list-disc ml-8 mb-4">
+                        <li>Confidentiality: Manuscripts under review must be treated as confidential.</li>
+                        <li>Objectivity: Reviews should be conducted objectively, with clear and constructive feedback.</li>
+                        <li>Conflict of Interest: Reviewers must disclose any potential conflicts of interest and recuse themselves if necessary.</li>
+                        <li>Timeliness: Reviewers should complete reviews within the agreed timeframe.</li>
+                    </ul>
+
+                    <h2 className="font-semibold mb-4">4. Responsibilities of Editors</h2>
+                    <ul className="list-disc ml-8 mb-4">
+                        <li>Fairness: Editorial decisions will be made without regard to race, gender, sexual orientation, religious belief, or political philosophy.</li>
+                        <li>Confidentiality: Editors must protect the confidentiality of all submitted manuscripts.</li>
+                        <li>Integrity: Editors will take reasonable steps to identify and prevent the publication of papers where research misconduct has occurred.</li>
+                        <li>Corrections and Retractions: Editors will issue corrections or retractions when necessary.</li>
+                    </ul>
+
+                    <h2 className="font-semibold mb-4">5. Misconduct Handling</h2>
+                    <p className="mb-4">All allegations of misconduct will be taken seriously and investigated in accordance with COPE's flowcharts and best practices. This includes:</p>
+                    <ul className="list-disc ml-8 mb-4">
+                        <li>Fabrication or falsification of data</li>
+                        <li>Plagiarism</li>
+                        <li>Duplicate publication</li>
+                        <li>Undisclosed conflicts of interest</li>
+                    </ul>
+
+                    <h2 className="font-semibold mb-4">6. Retraction Policy</h2>
+                    <p className="mb-4">Articles may be retracted if:</p>
+                    <ul className="list-disc ml-8 mb-4">
+                        <li>There is clear evidence of unreliable findings</li>
+                        <li>Findings have been previously published elsewhere without proper crossreferencing</li>
+                        <li>It constitutes plagiarism or unethical research</li>
+                    </ul>
+
+                    <h2 className="font-semibold mb-4">7. Appeals and Complaints</h2>
+                    <p>Authors have the right to appeal editorial decisions. Complaints regarding ethical issues will be handled in accordance with COPE guidelines.</p>
+                </div>
+                <div id="submit-paper" className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submit Your Paper
                     <div className="text-sm font-normal mt-1">Fill out the form below to submit your paper for review.</div>
                 </div>
                 <form className="space-y-4" onSubmit={handleSubmit}>

@@ -8,7 +8,7 @@ const downloads = [
     },
     {
         label: "Manuscript Submission Template",
-        link: "/downloads/manuscript-template.docx",
+        link: "/downloads/template.docx",
     },
     {
         label: "Presentation Template",
