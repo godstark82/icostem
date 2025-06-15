@@ -16,17 +16,17 @@ const registrationCommittee = [
     { name: "Ms Mariam Alsalman", role: "CAFS, UTB" },
     { name: "Ms Esra Abdulaziz Ahmed", role: "CAFS, UTB" },
     { name: "Ms Mona Mansoor Ahmed Hammad", role: "CAFS, UTB" },
-    { name: "Prof Muhammad Saad", role: "CAFS, UTB" },
+    { name: "Dr. Muhammad Saad", role: "CAFS, UTB" },
     { name: "Ms Noor Abdulla Alawadhi", role: "CAFS, UTB" },
 ];
 
 const prMarketingCommittee = [
     { name: "Mr Amer Bittar", role: "MarCom, UTB" },
-    { name: "Prof Caren Bansolay", role: "CGE, UTB" },
-    { name: "Prof Stephen Guansi", role: "CAFS, UTB" },
-    { name: "Prof Saubhagyalaxmi Misra", role: "CAFS, UTB" },
+    { name: "Dr. Caren Bansolay", role: "CGE, UTB" },
+    { name: "Dr. Stephen Guansi", role: "CAFS, UTB" },
+    { name: "Dr. Saubhagyalaxmi Misra", role: "CAFS, UTB" },
     { name: "Mr Husain Mohamed Al Karrani", role: "CAFS, UTB" },
-    { name: "Prof Redha Shaker", role: "ACDC, UTB" },
+    { name: "Dr. Redha Shaker", role: "ACDC, UTB" },
 ];
 
 const itSupportCommittee = [
@@ -36,7 +36,7 @@ const itSupportCommittee = [
 
 const financialSupportCommittee = [
     { name: "Mr Elson Samuel", role: "Accounts, UTB" },
-    { name: "Aditya Paresh Kothari", role: "Accounts, UTB" },
+    { name: "Mr Aditya Paresh Kothari", role: "Accounts, UTB" },
     { name: "Ms Rosemarie Rosales", role: "Procurement, UTB" }
 ];
 

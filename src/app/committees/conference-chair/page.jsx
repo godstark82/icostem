@@ -3,16 +3,16 @@ import AboutHeader from "../../../components/common/AboutHeader";
 import CommitteeMemberGrid from "../../../components/common/CommitteeMemberGrid";
 
 const executiveChairs = [
-    { name: "Prof Haitham Alqahtani", role: "Vice President, Academic Affairs, UTB" },
-    { name: "Prof Narendra Kumar", role: "SERF Academy" },
-    { name: "Prof Dr Danilo Ditoy", role: "Dean, CAFS" },
-    { name: "Prof Dr Husham M Ahmed", role: "Research Director, UTB" },
+    { name: "Dr. Haitham Alqahtani", role: "Vice President, Academic Affairs, UTB" },
+    { name: "Dr. Narendra Kumar", role: "NIET,NIMS University,India" },
+    { name: "Dr. Danilo Ditoy", role: "Dean, CAFS" },
+    { name: "Prof Husham M Ahmed", role: "Research Director, UTB" },
 ];
 
 const generalChairs = [
-    { name: "Prof Shabana Faizal", role: "Head, DBRC, UTB" },
-    { name: "Prof Nidhi Menon", role: "Assistant Professor, CAFS, UTB" },
-    { name: "Prof Reem Abdalla", role: "Program Head, BSBI, CAFS, UTB" },
+    { name: "Dr. Shabana Faizal", role: "Head, DBRC, UTB" },
+    { name: "Dr. Nidhi Menon", role: "Assistant Professor, CAFS, UTB" },
+    { name: "Dr. Reem Abdalla", role: "Program Head, BSBI, CAFS, UTB" },
 ];
 
 export default function ConferenceChairPage() {
