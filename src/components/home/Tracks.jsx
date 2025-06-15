@@ -6,7 +6,7 @@ const TRACKS = [
     "Sustainable Development Practices",
     "Digital Finance",
     "Marketing and Digitalisation",
-    "Sustainable trends in HR",
+    "Sustainable Trends in HR",
     "E-Commerce and Supply Chain Management",
 ];
 

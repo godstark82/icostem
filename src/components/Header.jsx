@@ -11,11 +11,11 @@ const Header = () => {
             "UTB": 'UTB',
             'Important Dates': 'Important Dates',
             'Programme': 'Programme',
-            'Accomondation Options': 'Accomondation Options'
+            'Accomodation Options': 'Accomodation Options'
         },
         "COMMITTEES": {
-            "Conference Chair": "Conference Chair",
-            "Organizing Committee": "Organizing Committee",
+            "Conference Chairs": "Conference Chairs",
+            "Organising Committee": "Organising Committee",
             "Review Committee": "Review Committee",
             "Other Committees": "Other Committees",
         },

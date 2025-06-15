@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'SIMDTE 2025',
-  description: 'International Conference on Simulation, Modeling and Optimization',
+  description: 'Sustainable Innovations in Management in the Digital Transformation Era',
 };
 
 export default function RootLayout({ children }) {

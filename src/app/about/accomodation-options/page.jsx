@@ -6,12 +6,13 @@ const hotels = [
         name: "InterContinental Bahrain",
         image: "/images/hotels/intercontinental.jpg",
         link: "https://www.ihg.com/intercontinental/hotels/gb/en/manama/bahha/hoteldetail",
-        note: "*Select <b>University of Technology Bahrain</b> as Rate Reference.",
+        note: "*Select <b>University of Technology Bahra*</b> as Rate Reference.",
     },
     {
         name: "Downtown Rotana",
         image: "/images/hotels/downtown.jpg",
-        link: "https://www.rotana.com/rotanahotelandresorts/bahrain/manama/downtownrotana/",
+        link: "https://eur06.safelinks.protection.outlook.com/?url=http%3A%2F%2Froho.it%2Fbgmg&data=05%7C02%7Ccrbansolay%40utb.edu.bh%7Ccfa6045b6ccb425e426e08ddabdfcfc4%7Cc599d08d7ffd46c98e6ccc8b13dbba77%7C0%7C0%7C638855699924365403%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=qiBIKXnECK6lFPOIUs5Uap3y7%2BmHuA%2FUiRO1tn3Xm4Y%3D&reserved=0",
+        note: "*Use <b>ROSIDT</b> as the Booking Code"
     },
     {
         name: "Ibis",
