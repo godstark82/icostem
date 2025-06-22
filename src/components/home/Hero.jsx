@@ -17,7 +17,7 @@ export default function Hero() {
                         </button>
                     </div>
                     <div className="text-center text-white bg-primary p-2 w-full md:w-auto">
-                        <p className="text-white text-lg md:text-xl font-semibold">14-15 October</p>
+                        <p className="text-white text-lg md:text-xl font-semibold">14-15 October 2025</p>
                     </div>
                     <div className="text-center text-white w-full md:w-auto">
                         <img
