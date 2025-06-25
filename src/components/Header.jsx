@@ -11,7 +11,7 @@ const Header = () => {
             "UTB": 'UTB',
             'Important Dates': 'Important Dates',
             'Programme': 'Programme',
-            'Accomodation Options': 'Accomodation Options'
+            'Accommodation Options': 'Accommodation Options'
         },
         "COMMITTEES": {
             "Conference Chairs": "Conference Chairs",

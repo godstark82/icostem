@@ -20,6 +20,7 @@ const reviewCommitteeMembers = [
     { name: "Dr Rajkumar Palaniappan", role: "COE, UTB" },
     { name: "Dr Yogendra Rajoria", role: "KRMU, India" },
     { name: "Dr Chandra Mohan", role: "KRMU, India" },
+    {name: "Prof Khamrunissa Hussain", role: "Studies, Jeddah, Saudi Arabia"}
 ];
 
 export default function ReviewCommitteePage() {
