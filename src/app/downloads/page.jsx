@@ -4,7 +4,7 @@ import AboutHeader from "../../components/common/AboutHeader";
 const downloads = [
     {
         label: "Copyright Form",
-        link: "/downloads/copyright-form.pdf",
+        link: "/downloads/Copyright.pdf",
     },
     {
         label: "Manuscript Submission Template",
