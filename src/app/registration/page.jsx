@@ -20,6 +20,25 @@ const PriceCard = ({ price, label }) => {
     );
 };
 
+const registrationEmailTemplate = (form) => `Dear ${form.fullName},
+
+Thank you for registering for SIMDTE 2025. We have received your registration with the following details:
+
+Full Name: ${form.fullName}
+Email: ${form.email}
+Phone: ${form.phone}
+Affiliation: ${form.affiliation}
+Country: ${form.country}
+Category: ${form.category}
+Days Attending: ${form.daysAttending}
+Presenting Paper: ${form.presentingPaper ? 'Yes' : 'No'}
+Payment ID: ${form.paymentIntentId}
+
+We look forward to your participation in the conference.
+
+Best regards,
+SIMDTE 2025 Committee`;
+
 export default function RegistrationPage() {
     const [form, setForm] = useState({
         fullName: "",
@@ -76,6 +95,19 @@ export default function RegistrationPage() {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            // Send confirmation email
+            await fetch('/api/mailer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: form.email,
+                    subject: "Registration Confirmation - SIMDTE 2025",
+                    text: registrationEmailTemplate(form)
+                })
+            });
 
             if (response.status === 200) {
                 setShowSuccessDialog(true);

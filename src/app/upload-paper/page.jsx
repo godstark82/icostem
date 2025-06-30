@@ -2,6 +2,16 @@
 import React, { useState } from "react";
 import AboutHeader from "../../components/common/AboutHeader";
 
+// Email templates
+const successEmailTemplate = (name, title) => `Dear ${name},
+
+Thank you for submitting your paper "${title}" to SIMDTE 2025.
+
+Your submission has been received and will be reviewed by our committee. You will be notified of the review outcome by September 15, 2025.
+
+Best regards,
+SIMDTE 2025 Committee`;
+
 const guidelines = [
     {
         label: "Manuscript Format: MS Word, following the ",
@@ -107,6 +117,19 @@ export default function UploadPaperPage() {
             if (!res.ok) {
                 throw new Error(data.error || 'Failed to upload paper');
             }
+
+            // Send success email
+            await fetch('/api/mailer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: form.uploaderEmail,
+                    subject: "Paper Submission Successful - SIMDTE 2025",
+                    text: successEmailTemplate(form.uploaderName, form.paperTitle)
+                })
+            });
 
             setShowModal(true);
             setStatus("Paper submitted successfully!");
