@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 
 export default function RegistrationList({ users, onRefresh }) {
@@ -32,6 +32,25 @@ export default function RegistrationList({ users, onRefresh }) {
             onRefresh();
         } catch (error) {
             console.error('Error updating payment status:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDelete = async (userId) => {
+        if (!window.confirm('Are you sure you want to delete this registration and associated papers? This action cannot be undone.')) {
+            return;
+        }
+        
+        setLoading(true);
+        try {
+            // Delete registration
+            await deleteDoc(doc(db, 'registrations', userId));
+            // Delete associated papers
+            await deleteDoc(doc(db, 'papers', userId));
+            onRefresh();
+        } catch (error) {
+            console.error('Error deleting registration and papers:', error);
         } finally {
             setLoading(false);
         }
@@ -113,6 +132,13 @@ export default function RegistrationList({ users, onRefresh }) {
                                             </span>
                                         </label>
                                     </div>
+                                    <button
+                                        onClick={() => handleDelete(user.id)}
+                                        disabled={loading}
+                                        className="text-red-600 hover:text-red-900 text-sm font-medium"
+                                    >
+                                        Delete Registration & Papers
+                                    </button>
                                 </div>
                             </td>
                         </tr>

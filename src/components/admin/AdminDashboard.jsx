@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { getAuth, signOut } from 'firebase/auth';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import PaperList from './PaperList';
 import UserList from './UserList';
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
             }));
             setPapers(papersData);
 
-            // Fetch users (if you have a users collection)
+            // Fetch users
             const usersQuery = query(collection(db, 'registrations'));
             const usersSnapshot = await getDocs(usersQuery);
             const usersData = usersSnapshot.docs.map(doc => ({
@@ -48,6 +48,24 @@ export default function AdminDashboard() {
             await signOut(auth);
         } catch (error) {
             console.error('Logout error:', error);
+        }
+    };
+
+    const handleDeletePaper = async (paperId) => {
+        try {
+            await deleteDoc(doc(db, 'papers', paperId));
+            await fetchData(); // Refresh data after deletion
+        } catch (error) {
+            console.error('Error deleting paper:', error);
+        }
+    };
+
+    const handleDeleteRegistration = async (userId) => {
+        try {
+            await deleteDoc(doc(db, 'registrations', userId));
+            await fetchData(); // Refresh data after deletion
+        } catch (error) {
+            console.error('Error deleting registration:', error);
         }
     };
 
@@ -78,7 +96,7 @@ export default function AdminDashboard() {
             </header>
 
             {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <main className="max-w-8xl mx-20 py-4">
                 {/* Tabs */}
                 <div className="border-b border-gray-200 mb-8">
                     <nav className="-mb-px flex space-x-8">
@@ -106,12 +124,12 @@ export default function AdminDashboard() {
                 {/* Content */}
                 <div className="bg-white shadow rounded-lg">
                     {activeTab === 'papers' ? (
-                        <PaperList papers={papers} onRefresh={fetchData} />
+                        <PaperList papers={papers} onRefresh={fetchData} onDelete={handleDeletePaper} />
                     ) : (
-                        <UserList users={users} onRefresh={fetchData} />
+                        <UserList users={users} onRefresh={fetchData} onDelete={handleDeleteRegistration} />
                     )}
                 </div>
             </main>
         </div>
     );
-} 
+}
