@@ -20,6 +20,18 @@ const hotels = [
         link: "https://all.accor.com/hotel/6702/index.en.shtml",
         note: "*Prior to booking, email <b><a href='mailto:Vanessa.vaquilar@accor.com'>Vanessa.vaquilar@accor.com</a></b> or <b><a href='https://wa.me/97335358850'>WhatsApp +973 35358850</a></b>",
     },
+    {
+        name: "The Westin City Centre Bahrain",
+        image: null,
+        link: "http://www.westincitycentrebahrain.com/",
+        note: ""
+    },
+    {
+        name: "Le Méridien City Centre Bahrain",
+        image: null,
+        link: "http://www.lemeridienbahraincitycentre.com/",
+        note: "",
+    },
 ];
 
 export default function AccommodationOptionsPage() {
