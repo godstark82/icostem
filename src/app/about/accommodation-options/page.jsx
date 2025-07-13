@@ -39,7 +39,7 @@ export default function AccommodationOptionsPage() {
         <div className="min-h-screen bg-white">
             <AboutHeader
                 title="Accommodation Options"
-                date="14 – 15 October"
+                date="September 5-7, 2025"
                 image="/images/simdte-white-lg.png"
                 overlayColor="#1a1a2e"
                 bgImage="/images/utb-images/gallery/gallery-2.jpg"
@@ -48,13 +48,13 @@ export default function AccommodationOptionsPage() {
             <div className="max-w-6xl mx-auto px-4 py-12">
                 <div className="mb-8 text-lg text-gray-900">
                     <p className="mb-4">
-                        We are pleased to offer our accommodation options for delegates attending <b>Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025)</b>, hosted by the <b>University of Technology Bahrain (UTB)</b>.
+                        We are pleased to offer our accommodation options for delegates attending <b>Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025)</b>, hosted by the <b>University of Technology Bahrain (UTB)</b>.
                     </p>
                     <p className="mb-4">
                         To ensure a comfortable and convenient stay, UTB has partnered with some hotels located within close proximity to the conference venue and UTB. These hotels offer a range of amenities and price points to suit various preferences and budgets.
                     </p>
                     <ul className="list-disc font-bold ml-8 mb-4">
-                        <li>Hotels with exclusive rates for SIMDTE 2025 participants</li>
+                        <li>Hotels with exclusive rates for ICOSTEM 2025 participants</li>
                         <li>Walking distance or short drive to the conference venue</li>
                         <li>Options ranging from budget to premium accommodation</li>
                     </ul>

@@ -8,7 +8,7 @@ const Header = () => {
     const links = {
         "/": "HOME",
         "ABOUT": {
-            "UTB": 'UTB',
+            "About College": 'About College',
             'Important Dates': 'Important Dates',
             'Programme': 'Programme',
             'Accommodation Options': 'Accommodation Options'
@@ -79,7 +79,7 @@ const Header = () => {
                 <nav className="flex justify-between items-center">
                     <div className="text-2xl font-bold text-black">
                         <Link href="/">
-                            <img src="/images/utb.svg" alt="UTB Logo" className="h-12" />
+                            <img src="/images/arya.webp" alt="UTB Logo" className="h-12" />
                         </Link>
                     </div>
                     <div className="hidden md:flex space-x-6">

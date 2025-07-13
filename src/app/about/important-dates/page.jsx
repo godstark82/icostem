@@ -4,7 +4,7 @@ import AboutHeader from '../../../components/common/AboutHeader';
 export default function ImportantDates() {
     return (
         <div className="bg-white">
-            <AboutHeader title="Important Dates" date="14 - 15 October" image='/images/simdte-dark-lg.png' overlayColor='#1f1f33' bgImage='/images/calendar-imp-dates.png' dividerColor='white' />
+            <AboutHeader title="Important Dates" date="5 -7 September" image='/images/simdte-dark-lg.png' overlayColor='#1f1f33' bgImage='/images/calendar-imp-dates.png' dividerColor='white' />
             <div className="container mx-auto px-4 py-16">
                 <div className="overflow-x-auto">
                     <table className="min-w-full border-separate border-spacing-0 rounded-lg overflow-hidden shadow-md">

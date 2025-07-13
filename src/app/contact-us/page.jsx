@@ -7,7 +7,7 @@ export default function ContactUsPage() {
         <div className="min-h-screen bg-white">
             <AboutHeader
                 title="Contact Us"
-                date="14 – 15 October"
+                date="5 - 7 September"
                 image="/images/simdte-white-lg.png"
                 overlayColor="#1a1a2e"
                 bgImage="/images/utb-images/gallery/gallery-2.jpg"
@@ -18,8 +18,8 @@ export default function ContactUsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     <div className="bg-gray-100 rounded-lg p-6 shadow flex flex-col gap-2">
                         <div className="font-bold text-lg flex items-center gap-2">📍 Address</div>
-                        <div>University of Technology Bahrain, Building 829, Road 1213, Block 712, Salmabad, Kingdom of Bahrain</div>
-                        <div>Conference Venue:<br />InterContinental Bahrain</div>
+                        <div>Arya College, Jaipur, Kukas SP-40, RIICO Industrial Area, Kukas, Jaipur, Rajasthan, 302028</div>
+                        <div>Conference Venue:<br />Arya College, Jaipur</div>
                     </div>
                     <div className="bg-gray-100 rounded-lg p-6 shadow flex flex-col gap-2">
                         <div className="font-bold text-lg flex items-center gap-2">💬 WhatsApp</div>
@@ -27,7 +27,7 @@ export default function ContactUsPage() {
                     </div>
                     <div className="bg-gray-100 rounded-lg p-6 shadow flex flex-col gap-2">
                         <div className="font-bold text-lg flex items-center gap-2">✉️ Email</div>
-                        <div><a href="mailto:simdte@utb.edu.bh">simdte@utb.edu.bh</a></div>
+                        <div><a href="mailto:icostem@utb.edu.bh">icostem@utb.edu.bh</a></div>
                     </div>
                 </div>
                 {/* Contact Form and Map */}
@@ -47,7 +47,7 @@ export default function ContactUsPage() {
                     <div className="flex-1 min-h-[300px]">
                         <iframe
                             title="UTB Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3979802536014!2d50.519179799999996!3d26.183729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afd12fdcfc07%3A0x7dc8a621795a72f3!2sUniversity%20of%20Technology%20Bahrain%20-%20UTB!5e0!3m2!1sen!2sin!4v1748862272030!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.010604890812!2d75.89097488041605!3d27.029830829634673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396daff75daffa4d%3A0x3b7007c44ebf96df!2sArya%20Main%20Campus!5e0!3m2!1sen!2sin!4v1752416379856!5m2!1sen!2sin"
                             width="100%"
                             height="350"
                             style={{ border: 0 }}

@@ -6,7 +6,7 @@ import Layout from '../components/layout/Layout';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'SIMDTE 2025',
+  title: 'ICOSTEM 2025',
   description: 'Sustainable Innovations in Management in the Digital Transformation Era',
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutHeader({ title = 'University Profile', date = '14 - 15 October', image = '/images/simdte-white-lg.png', overlayColor = '#d0224a', bgImage = '/images/utb-images/gallery/gallery-2.jpg', dividerColor = 'white' }) {
+export default function AboutHeader({ title = 'University Profile', date = '5 - 7 September', image = '/images/simdte-white-lg.png', overlayColor = '#d0224a', bgImage = '/images/utb-images/gallery/gallery-2.jpg', dividerColor = 'white' }) {
     return (
         <div style={
             {

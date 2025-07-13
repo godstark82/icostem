@@ -11,7 +11,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-light/80">
                             <li className='flex items-center gap-2'>
                                 <FaMapMarkerAlt className="text-primary size-7" />
-                                <p>University of Technology Bahrain, Building 829, Road 1213, Block 712, Salmabad, Kingdom of Bahrain</p>
+                                <p>Arya College, Jaipur, Kukas SP-40, RIICO Industrial Area, Kukas, Jaipur, Rajasthan, 302028</p>
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaPhone className="text-primary" />
@@ -19,7 +19,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaEnvelope className="text-primary" />
-                                <span><a href="mailto:simdte@utb.edu.bh">simdte@utb.edu.bh</a></span>
+                                <span><a href="mailto:icostem@utb.edu.bh">icostem@utb.edu.bh</a></span>
                             </li>
                             <div className="flex space-x-4 pt-2">
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
@@ -44,22 +44,22 @@ const Footer = () => {
                         <h3 className="text-xl font-bold text-white">About</h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/utb" className="text-light/80 hover:text-primary transition-colors block">
-                                    University of Technology Bahrain (UTB)
+                                <Link href="/about/utb" className="text-light/80 hover:text-primary transition-colors block">
+                                    Arya College, Jaipur
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/important-dates" className="text-light/80 hover:text-primary transition-colors block">
+                                <Link href="/about/important-dates" className="text-light/80 hover:text-primary transition-colors block">
                                     Important Dates
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/programme" className="text-light/80 hover:text-primary transition-colors block">
+                                <Link href="/about/programme" className="text-light/80 hover:text-primary transition-colors block">
                                     Programme
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/accommodation" className="text-light/80 hover:text-primary transition-colors block">
+                                <Link href="/about/accommodation-options" className="text-light/80 hover:text-primary transition-colors block">
                                     Accommodation Options
                                 </Link>
                             </li>
@@ -84,7 +84,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-light/80 hover:text-primary transition-colors block">
+                                <Link href="/contact-us" className="text-light/80 hover:text-primary transition-colors block">
                                     Contact Us
                                 </Link>
                             </li>
@@ -99,7 +99,7 @@ const Footer = () => {
                         <h3 className="text-xl font-bold text-white">Conference Venue</h3>
                         <div className="aspect-w-16 aspect-h-9 w-full">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.8211172197557!2d50.57360839999999!3d26.235001299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a58a8576d17d%3A0x6d01fa2c1f7633e6!2sInterContinental%20Bahrain%2C%20an%20IHG%20Hotel!5e0!3m2!1sen!2sin!4v1748862133696!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.010604890812!2d75.89097488041605!3d27.029830829634673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396daff75daffa4d%3A0x3b7007c44ebf96df!2sArya%20Main%20Campus!5e0!3m2!1sen!2sin!4v1752416379856!5m2!1sen!2sin"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0 }}
@@ -112,7 +112,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t border-light/20 mt-8 pt-8 text-center text-light/80">
-                    <p className="text-sm">SIMDTE &copy; {new Date().getFullYear()} All rights reserved.</p>
+                    <p className="text-sm">ICOSTEM &copy; {new Date().getFullYear()} All rights reserved.</p>
                 </div>
             </div>
         </footer>
