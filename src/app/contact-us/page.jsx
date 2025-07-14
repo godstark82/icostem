@@ -23,7 +23,7 @@ export default function ContactUsPage() {
                     </div>
                     <div className="bg-gray-100 rounded-lg p-6 shadow flex flex-col gap-2">
                         <div className="font-bold text-lg flex items-center gap-2">💬 WhatsApp</div>
-                        <div><a href="https://wa.me/9460642167" target="_blank" rel="noopener noreferrer">+91 9460642167</a></div>
+                        <div><a href="https://wa.me/8949232048" target="_blank" rel="noopener noreferrer">+91 8949232048</a></div>
                     </div>
                     <div className="bg-gray-100 rounded-lg p-6 shadow flex flex-col gap-2">
                         <div className="font-bold text-lg flex items-center gap-2">✉️ Email</div>
@@ -41,7 +41,7 @@ export default function ContactUsPage() {
                         </div>
                         <input type="text" placeholder="Subject" className="border border-gray-300 rounded px-3 py-2" required />
                         <textarea placeholder="Message" className="border border-gray-300 rounded px-3 py-2 min-h-[100px]" required />
-                        <button type="submit" aria-label="Send Message" onClick={() => window.open('https://wa.me/9460642167', '_blank')} className="bg-primary text-white font-bold py-3 rounded mt-2 hover:bg-primary-dark transition">Send Message</button>
+                        <button type="submit" aria-label="Send Message" onClick={() => window.open('https://wa.me/8949232048', '_blank')} className="bg-primary text-white font-bold py-3 rounded mt-2 hover:bg-primary-dark transition">Send Message</button>
                     </form>
                     {/* Google Map */}
                     <div className="flex-1 min-h-[300px]">

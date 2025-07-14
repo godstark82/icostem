@@ -22,7 +22,7 @@ const PriceCard = ({ price, label }) => {
 
 const registrationEmailTemplate = (form) => `Dear ${form.fullName},
 
-Thank you for registering for SIMDTE 2025. We have received your registration with the following details:
+Thank you for registering for ICOSTEM 2025. We have received your registration with the following details:
 
 Full Name: ${form.fullName}
 Email: ${form.email}
@@ -37,7 +37,7 @@ Payment ID: ${form.paymentIntentId}
 We look forward to your participation in the conference.
 
 Best regards,
-SIMDTE 2025 Committee`;
+ICOSTEM 2025 Committee`;
 
 export default function RegistrationPage() {
     const [form, setForm] = useState({
@@ -104,7 +104,7 @@ export default function RegistrationPage() {
                 },
                 body: JSON.stringify({
                     to: form.email,
-                    subject: "Registration Confirmation - SIMDTE 2025",
+                    subject: "Registration Confirmation - ICOSTEM 2025",
                     text: registrationEmailTemplate(form)
                 })
             });

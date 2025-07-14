@@ -5,17 +5,17 @@ import AboutHeader from "../../components/common/AboutHeader";
 // Email templates
 const successEmailTemplate = (name, title) => `Dear ${name},
 
-Thank you for submitting your paper "${title}" to SIMDTE 2025.
+Thank you for submitting your paper "${title}" to ICOSTEM 2025.
 
 Your submission has been received and will be reviewed by our committee. You will be notified of the review outcome by September 15, 2025.
 
 Best regards,
-SIMDTE 2025 Committee`;
+ICOSTEM 2025 Committee`;
 
 const guidelines = [
     {
         label: "Manuscript Format: MS Word, following the ",
-        linkText: "SIMDTE 2025 Template",
+        linkText: "ICOSTEM 2025 Template",
         link: "/downloads/template.docx",
     },
     {
@@ -126,7 +126,7 @@ export default function UploadPaperPage() {
                 },
                 body: JSON.stringify({
                     to: form.uploaderEmail,
-                    subject: "Paper Submission Successful - SIMDTE 2025",
+                    subject: "Paper Submission Successful - ICOSTEM 2025",
                     text: successEmailTemplate(form.uploaderName, form.paperTitle)
                 })
             });
@@ -176,7 +176,7 @@ export default function UploadPaperPage() {
                 <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submission Guidelines</div>
                 <div className="mb-8 text-gray-900">
                     <p className="mb-4">
-                        Authors are invited to submit original, unpublished research papers aligned with the tracks of Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025). Submissions must adhere to the following:
+                        Authors are invited to submit original, unpublished research papers aligned with the tracks of Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025). Submissions must adhere to the following:
                     </p>
                     <ul className="list-disc ml-8 mb-4">
                         {guidelines.map((g, idx) => (
@@ -199,7 +199,7 @@ export default function UploadPaperPage() {
                 <div className="mb-8 text-gray-900">
                     <h2 className="font-semibold mb-4">1. Introduction</h2>
                     <p className="mb-4">
-                        The Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025) is committed to upholding the highest standards of publication ethics. We adhere to the principles outlined by the Committee on Publication Ethics (COPE) to ensure the integrity of academic work presented and published through our platform.
+                        The Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025) is committed to upholding the highest standards of publication ethics. We adhere to the principles outlined by the Committee on Publication Ethics (COPE) to ensure the integrity of academic work presented and published through our platform.
                     </p>
 
                     <h2 className="font-semibold mb-4">2. Responsibilities of Authors</h2>
@@ -352,7 +352,7 @@ export default function UploadPaperPage() {
                         <div className="text-center mb-6">
                             <h2 className="text-lg font-bold mb-2">Thank You for Your Submission</h2>
                             <p className="mb-2">
-                                Your paper has been successfully submitted to Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE 2025), hosted by the University of Technology Bahrain (UTB).
+                                Your paper has been successfully submitted to Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025), hosted by Arya College, Jaipur.
                             </p>
                             <p className="mb-2">
                                 We appreciate your contribution and look forward to reviewing your work.<br />
