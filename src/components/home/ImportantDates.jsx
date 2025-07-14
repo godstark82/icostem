@@ -2,12 +2,9 @@ import SectionHeader from "../common/SectionHeader";
 import SectionImageHeader from "../common/SectionImageHeader";
 
 const DATES = [
-    { day: "15", month: "July", desc: "Abstract Submission Deadline" },
-    { day: "15", month: "July", desc: "Last Day of Early Bird Registration" },
-    { day: "20", month: "August", desc: "Full Paper Submission Deadline" },
-    { day: "15", month: "September", desc: "Notification of Acceptance" },
-    { day: "14", month: "October", desc: "In-person Conference Day" },
-    { day: "15", month: "October", desc: "Online Conference Day" },
+    { day: "27", month: "May", desc: "Full Paper Submission Deadline" },
+    { day: "29", month: "May", desc: "Notification of Acceptance" },
+    { day: "27-28", month: "June", desc: "Conference Date" },
 ];
 
 export default function ImportantDates() {

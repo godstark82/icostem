@@ -11,26 +11,14 @@ export default function AboutUniversityPage() {
                     {/* Left: Text Content */}
                     <div className="md:w-2/3 text-gray-900 space-y-6 text-lg">
                         <p>
-                            The Arya College, Jaipur, established in 2000, stands among the Kingdom's leading private universities, recognised for its unwavering commitment to academic excellence, innovation, and international engagement.
+                        All India Arya Samajis Society for higher & Technical Education conceptualized the establishment of ARYA group of colleges in the year 1999. Under the aegis of this society ARYA COLLEGE of Engineering. & I.T. became functional from 2000. This premier center of learning, an embodiment of the vision and zeal of the reputed Agarwal family, is committed to facilitate high quality technical education in Rajasthan (India). The group also believes in creating an academic environment that boasts of rigorous work culture with excellent teaching system.
                         </p>
                         <p>
-                            With a strong portfolio of globally recognised programmes in business, engineering, and technology, Arya College, Jaipur equips its students with industry-relevant skills and a future-ready mindset essential for succeeding in today's dynamic global landscape.
+                        THE PINK CITY OF INDIA Jaipur, the capital of Rajasthan, is one of the rare examples of 18 century town built after careful planning. It was established by Maharaja Sawai Jai Singh in the year 1727. Jaipur is predominantly known for its musicians, artisans and craftsmen. There are innumerable sagas and stories of the culture, traditions and practices associated with the city of Jaipur. This diverse land of rich culture and heritage is a royal treat for tourists from all over the world. Some of the most popular tourist destinations in Jaipur include: Hawa Mahal - the palace of winds, Amber Fort – capital of erstwhile Jaipur state, Jantar Mantar - the largest working observatory, City Palace - the residence of erstwhile Maharaja of Jaipur, Nahargarh Fort - the hunting residence of erstwhile Maharajas and Jaigarh Fort. Jaipur is located approximately 270 km south of Delhi and 250 km west of Agra and is well connected to other parts of the country through air, rail and road transport.
                         </p>
-                        <div className="font-extrabold text-2xl md:text-3xl text-secondary mt-8 mb-2">
+                        {/* <div className="font-extrabold text-2xl md:text-3xl text-secondary mt-8 mb-2">
                             DISCOVER YOUR FUTURE AT Arya College, Jaipur - WHERE INNOVATION DRIVES EXCELLENCE AND OPPORTUNITY KNOWS NO BORDERS.
-                        </div>
-                        <p>
-                            Arya College, Jaipur holds the distinction of being the first private university in Bahrain to earn accreditation from the prestigious Accreditation Board for Engineering and Technology (ABET). Further institutional recognition includes accreditations from the European Council for Business Education (ECBE), the Chartered Institute of Marketing (CIM), and the Association of Chartered Certified Accountants (ACCA). Arya College, Jaipur is also officially recognised by the Ministry of Education in Saudi Arabia and the Ministry of Higher Education and Scientific Research in Jordan, broadening global academic and career pathways for its graduates.
-                        </p>
-                        <p>
-                            Home to a multicultural student community representing over 55 nationalities, Arya College, Jaipur fosters a diverse and inclusive academic environment. The university maintains strategic collaborations with leading universities and industry partners across the United Kingdom, United States, France, United Arab Emirates, India, and Brazil, enhancing both the academic experience and professional exposure of its students.
-                        </p>
-                        <p>
-                            Arya College, Jaipur's modern campus features cutting-edge facilities and an industry-driven curriculum that blends academic quality with practical application. This approach ensures graduates are not only academically proficient but also workplace-ready. Recent developments include the ongoing completion of an Olympic-standard aquatic centre, positioning Arya College, Jaipur as a premier destination for international student-athletes and providing premium amenities for both recreation and residential experiences.
-                        </p>
-                        <p>
-                            As the organising university of this international conference, Arya College, Jaipur proudly extends its vision of innovation and excellence to the global academic community. We welcome delegates, scholars, and professionals to connect, collaborate, and contribute to the advancement of knowledge and practice.
-                        </p>
+                        </div> */}
                     </div>
                     {/* Right: Image */}
                     <div className="md:w-1/3 w-full flex justify-center md:justify-end">

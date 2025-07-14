@@ -48,10 +48,10 @@ export default function AccommodationOptionsPage() {
             <div className="max-w-6xl mx-auto px-4 py-12">
                 <div className="mb-8 text-lg text-gray-900">
                     <p className="mb-4">
-                        We are pleased to offer our accommodation options for delegates attending <b>Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025)</b>, hosted by the <b>University of Technology Bahrain (UTB)</b>.
+                        We are pleased to offer our accommodation options for delegates attending <b>Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025)</b>, hosted by the <b>Arya College of Engineering & I.T. (Arya 1 Old Campus) Kukas, Jaipur</b>.
                     </p>
                     <p className="mb-4">
-                        To ensure a comfortable and convenient stay, UTB has partnered with some hotels located within close proximity to the conference venue and UTB. These hotels offer a range of amenities and price points to suit various preferences and budgets.
+                        To ensure a comfortable and convenient stay, Arya College, Jaipur has partnered with some hotels located within close proximity to the conference venue and Arya College, Jaipur. These hotels offer a range of amenities and price points to suit various preferences and budgets.
                     </p>
                     <ul className="list-disc font-bold ml-8 mb-4">
                         <li>Hotels with exclusive rates for ICOSTEM 2025 participants</li>

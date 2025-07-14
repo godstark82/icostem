@@ -16,28 +16,16 @@ export default function ImportantDates() {
                         </thead>
                         <tbody>
                             <tr className="bg-white border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">Abstract Submission Deadline</td>
-                                <td className="px-6 py-4">15 July 2025</td>
-                            </tr>
-                            <tr className="bg-gray-50 border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">Last Day of Early Bird Registration</td>
-                                <td className="px-6 py-4">15 July 2025</td>
-                            </tr>
-                            <tr className="bg-white border-t border-[#d0224a]/30">
                                 <td className="px-6 py-4">Full Paper Submission Deadline</td>
-                                <td className="px-6 py-4">20 August 2025</td>
+                                <td className="px-6 py-4">27 May 2025</td>
                             </tr>
                             <tr className="bg-gray-50 border-t border-[#d0224a]/30">
                                 <td className="px-6 py-4">Notification of Acceptance</td>
-                                <td className="px-6 py-4">15 September 2025</td>
+                                <td className="px-6 py-4">29 May 2025</td>
                             </tr>
                             <tr className="bg-white border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">In-person Conference Day</td>
-                                <td className="px-6 py-4">14 October 2025</td>
-                            </tr>
-                            <tr className="bg-gray-50 border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">Online Conference Day</td>
-                                <td className="px-6 py-4">15 October 2025</td>
+                                <td className="px-6 py-4"> Conference Date</td>
+                                <td className="px-6 py-4">27-28 June 2025</td>
                             </tr>
                         </tbody>
                     </table>

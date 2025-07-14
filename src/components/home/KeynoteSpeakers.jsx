@@ -2,28 +2,16 @@ import SectionImageHeader from "../common/SectionImageHeader";
 
 const SPEAKERS = [
     {
-        name: "Prof Anna Dunay",
-        affiliation: "John Von Neumann University",
-        country: "Hungary",
+        name: "Dr. Jaya Sinha",
+        affiliation: "Engineering College, Greater Noida",
+        country: "India",
         img: "/images/speakers/prof-anna-dunay.jpeg",
     },
     {
-        name: "Prof Dorota Jelonek",
-        affiliation: "Czestochowa University of Technology",
-        country: "Poland",
+        name: "Dr. Nevine Makramlabib Egypt",
+        affiliation: "Cairo University",
+        country: "Egypt",
         img: "/images/speakers/prof-dorota2.jpeg",
-    },
-    {
-        name: "Prof Magdalena Rzemieniak",
-        affiliation: "Lublin University of Technology",
-        country: "Poland",
-        img: "/images/speakers/prof-magdelena.jpeg"
-    },
-    {
-        name: "Prof Narendra Kumar",
-        affiliation: "NIET, NIMS University, Jaipur",
-        country: "India",
-        img: "/images/speakers/dr-narendra.jpeg",
     },
 ];
 
