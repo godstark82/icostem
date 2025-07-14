@@ -15,7 +15,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaPhone className="text-primary" />
-                                <a href="https://wa.me/97333926076"><span>+973 33926076</span></a>
+                                <a href="https://wa.me/9460642167" target="_blank" rel="noopener noreferrer"><span>+91 9460642167</span></a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaEnvelope className="text-primary" />

@@ -20,7 +20,7 @@ const TopBar = () => {
                     <div className="flex items-center gap-4">
                         <div className="text-sm flex items-center">
                             <FaPhoneAlt className='inline-block mr-2 text-primary' />
-                            <span className='text-black font-bold'><a href="https://wa.me/97333926076">+973 33926076</a></span>
+                            <span className='text-black font-bold'><a href="https://wa.me/9460642167" target="_blank" rel="noopener noreferrer">+91 9460642167</a></span>
                         </div>
                         <div className="flex space-x-2">
                             <a href="https://facebook.com " target='_blank' className="hover:text-secondary transition-colors" aria-label="Facebook">
