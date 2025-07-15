@@ -4,17 +4,19 @@ import KeynoteSpeakers from "../components/home/KeynoteSpeakers";
 import Overview from "../components/home/Overview";
 import Tracks from "../components/home/Tracks";
 import ImportantDates from "../components/home/ImportantDates";
-import MinisterWelcome from "../components/home/MinisterWelcome";
+import MinisterSection from "../components/home/MinisterSection";
+import Patners from "../components/home/Patners";
 
 const Home = () => {
     return (
         <>
             <Hero />
-            {/* <MinisterWelcome /> */}
+            <MinisterSection />
             <Overview />
             <Tracks />
             <ImportantDates />
             <KeynoteSpeakers />
+            <Patners />
             <Highlights />
         </>
     )

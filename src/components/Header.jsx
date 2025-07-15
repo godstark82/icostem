@@ -11,13 +11,13 @@ const Header = () => {
             "About College": 'About College',
             'Important Dates': 'Important Dates',
             'Programme': 'Programme',
-            'Accommodation Options': 'Accommodation Options'
+            // 'Accommodation Options': 'Accommodation Options'
         },
         "COMMITTEES": {
             "Conference Chairs": "Conference Chairs",
             "Organising Committee": "Organising Committee",
-            "Review Committee": "Review Committee",
-            "Other Committees": "Other Committees",
+            "Technical Board": "Technical Advisory Board",
+            // "Other Committees": "Other Committees",
         },
         "REGISTRATION": "REGISTRATION",
         "UPLOAD PAPER": "UPLOAD PAPER",

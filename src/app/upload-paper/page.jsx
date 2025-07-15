@@ -12,26 +12,6 @@ Your submission has been received and will be reviewed by our committee. You wil
 Best regards,
 ICOSTEM 2025 Committee`;
 
-const guidelines = [
-    {
-        label: "Manuscript Format: MS Word, following the ",
-        linkText: "ICOSTEM 2025 Template",
-        link: "/downloads/template.docx",
-    },
-    {
-        label: "Submission System: ",
-        linkText: "Upload Paper Portal.",
-        link: "#submit-paper",
-        target: "_self",
-    },
-    {
-        label: "Review Process: Double-blind peer review",
-    },
-    {
-        label: "Abstract Submission Deadline: 15 July 2025",
-    },
-];
-
 export default function UploadPaperPage() {
     const [form, setForm] = useState({
         paperTitle: "",
@@ -175,77 +155,45 @@ export default function UploadPaperPage() {
                 </div>
                 <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submission Guidelines</div>
                 <div className="mb-8 text-gray-900">
-                    <p className="mb-4">
-                        Authors are invited to submit original, unpublished research papers aligned with the tracks of Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025). Submissions must adhere to the following:
-                    </p>
-                    <ul className="list-disc ml-8 mb-4">
-                        {guidelines.map((g, idx) => (
-                            <li key={idx} className="mb-2">
-                                {g.label}
-                                {g.link && (
-                                    <a href={g.link} className="text-primary underline ml-1" target={g.target || "_blank"} rel="noopener noreferrer">{g.linkText}</a>
-                                )}
+                    <div className="mb-6">
+                        <h3 className="text-lg font-semibold mb-2">Submission Guidelines</h3>
+                        <ul className="list-disc ml-8 mb-4">
+                            <li>Original and unpublished research papers are invited.</li>
+                            <li>
+                                Submit papers at: <span className="font-semibold">[Insert submission link or email]</span>
                             </li>
-                        ))}
-                    </ul>
-                    <p className="mb-2">Authors of accepted papers will receive an official acceptance letter via email not later than 15 September 2025. The presented papers will be published in Scopus-indexed journals by Taylor & Francis.</p>
-                    <p className="mb-2">To confirm inclusion in the proceedings, authors must complete registration and payment via the Payment Link upon acceptance.</p>
-                    <p>Non-paper attendees can proceed to the payment link to register.</p>
-                </div>
-                <div className="flex justify-center gap-4 mb-4">
-                    <img src="/images/cope.jpg" alt="COPE" className="h-20 object-contain" />
-                </div>
-                <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">COPE Guidelines</div>
-                <div className="mb-8 text-gray-900">
-                    <h2 className="font-semibold mb-4">1. Introduction</h2>
-                    <p className="mb-4">
-                        The Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025) is committed to upholding the highest standards of publication ethics. We adhere to the principles outlined by the Committee on Publication Ethics (COPE) to ensure the integrity of academic work presented and published through our platform.
-                    </p>
-
-                    <h2 className="font-semibold mb-4">2. Responsibilities of Authors</h2>
-                    <ul className="list-disc ml-8 mb-4">
-                        <li>Originality: Submissions must be original and not under consideration elsewhere.</li>
-                        <li>Plagiarism: All manuscripts will be screened for plagiarism. Any form of plagiarism will result in rejection.</li>
-                        <li>Authorship: All listed authors must have made significant contributions to the research.</li>
-                        <li>Disclosure: Authors must disclose any conflicts of interest or funding sources.</li>
-                        <li>Corrections: Authors are obliged to promptly notify the editors of any errors discovered post-submission or post-publication.</li>
-                    </ul>
-
-                    <h2 className="font-semibold mb-4">3. Responsibilities of Reviewers</h2>
-                    <ul className="list-disc ml-8 mb-4">
-                        <li>Confidentiality: Manuscripts under review must be treated as confidential.</li>
-                        <li>Objectivity: Reviews should be conducted objectively, with clear and constructive feedback.</li>
-                        <li>Conflict of Interest: Reviewers must disclose any potential conflicts of interest and recuse themselves if necessary.</li>
-                        <li>Timeliness: Reviewers should complete reviews within the agreed timeframe.</li>
-                    </ul>
-
-                    <h2 className="font-semibold mb-4">4. Responsibilities of Editors</h2>
-                    <ul className="list-disc ml-8 mb-4">
-                        <li>Fairness: Editorial decisions will be made without regard to race, gender, sexual orientation, religious belief, or political philosophy.</li>
-                        <li>Confidentiality: Editors must protect the confidentiality of all submitted manuscripts.</li>
-                        <li>Integrity: Editors will take reasonable steps to identify and prevent the publication of papers where research misconduct has occurred.</li>
-                        <li>Corrections and Retractions: Editors will issue corrections or retractions when necessary.</li>
-                    </ul>
-
-                    <h2 className="font-semibold mb-4">5. Misconduct Handling</h2>
-                    <p className="mb-4">All allegations of misconduct will be taken seriously and investigated in accordance with COPE's flowcharts and best practices. This includes:</p>
-                    <ul className="list-disc ml-8 mb-4">
-                        <li>Fabrication or falsification of data</li>
-                        <li>Plagiarism</li>
-                        <li>Duplicate publication</li>
-                        <li>Undisclosed conflicts of interest</li>
-                    </ul>
-
-                    <h2 className="font-semibold mb-4">6. Retraction Policy</h2>
-                    <p className="mb-4">Articles may be retracted if:</p>
-                    <ul className="list-disc ml-8 mb-4">
-                        <li>There is clear evidence of unreliable findings</li>
-                        <li>Findings have been previously published elsewhere without proper crossreferencing</li>
-                        <li>It constitutes plagiarism or unethical research</li>
-                    </ul>
-
-                    <h2 className="font-semibold mb-4">7. Appeals and Complaints</h2>
-                    <p>Authors have the right to appeal editorial decisions. Complaints regarding ethical issues will be handled in accordance with COPE guidelines.</p>
+                            <li>All submissions will undergo double-blind peer review.</li>
+                        </ul>
+                    </div>
+                    <div className="mb-6">
+                        <h3 className="text-lg font-semibold mb-2">Publication Opportunities</h3>
+                        <ul className="list-disc ml-8 mb-4">
+                            <li>Selected papers will be published in Scopus-indexed / UGC-Care / peer-reviewed journals/ Proceedings.</li>
+                            <li>All accepted Abstracts will appear in the Conference Souvenir Proceedings with an ISBN.</li>
+                        </ul>
+                    </div>
+                    <div className="mb-6">
+                        <h3 className="text-lg font-semibold mb-2">Fees Details: For India</h3>
+                        <ul className="list-disc ml-8 mb-4">
+                            <li>Participation and Certificate (without Paper): <span className="font-semibold">Rs. 500/-</span></li>
+                            <li>Participation and Certificate (with Paper presentation): <span className="font-semibold">Rs. 1000/-</span></li>
+                            <li>Participation and Certificate (with Paper publication in Peer Review Journals): <span className="font-semibold">Rs. 2000/-</span></li>
+                            <li>Participation and Certificate (with Paper publication in SCOPUS Proceedings/ SCOPUS Journal: Peer Review Journals): <span className="font-semibold">Rs. 1000/- + Publication Charges as per journal/Proceedings</span></li>
+                        </ul>
+                        <h3 className="text-lg font-semibold mb-2">Fees Details: For Non India participants</h3>
+                        <ul className="list-disc ml-8 mb-4">
+                            <li>Participation with certificate: <span className="font-semibold">$25</span></li>
+                            <li>Participation with publications in SCOPUS Proceedings: <span className="font-semibold">$120</span></li>
+                            <li>Participation with publications in SCOPUS Journals: <span className="font-semibold">$20 + APC of the Journal</span></li>
+                        </ul>
+                    </div>
+                    <div className="mb-6">
+                        <h3 className="text-lg font-semibold mb-2">Mode of Presentation</h3>
+                        <ul className="list-disc ml-8 mb-4">
+                            <li>Both offline and Online options are available.</li>
+                            <li>E-certificates will be provided to all participants and presenters.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="submit-paper" className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Submit Your Paper
                     <div className="text-sm font-normal mt-1">Fill out the form below to submit your paper for review.</div>

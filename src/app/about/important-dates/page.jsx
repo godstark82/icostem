@@ -1,5 +1,27 @@
 import AboutHeader from '../../../components/common/AboutHeader';
 
+const importantDates = [
+    {
+        event: "Paper Submission Deadline",
+        date: "1 August 2025",
+        rowClass: "bg-white"
+    },
+    {
+        event: "Notification of Acceptance",
+        date: "15 August 2025",
+        rowClass: "bg-gray-50"
+    },
+    {
+        event: "Registration Deadline",
+        date: "16 August 2025",
+        rowClass: "bg-white"
+    },
+    {
+        event: "Conference Dates",
+        date: "6-7 September 2025",
+        rowClass: "bg-grey-50"
+    }
+];
 
 export default function ImportantDates() {
     return (
@@ -15,18 +37,15 @@ export default function ImportantDates() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="bg-white border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">Full Paper Submission Deadline</td>
-                                <td className="px-6 py-4">27 May 2025</td>
-                            </tr>
-                            <tr className="bg-gray-50 border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4">Notification of Acceptance</td>
-                                <td className="px-6 py-4">29 May 2025</td>
-                            </tr>
-                            <tr className="bg-white border-t border-[#d0224a]/30">
-                                <td className="px-6 py-4"> Conference Date</td>
-                                <td className="px-6 py-4">27-28 June 2025</td>
-                            </tr>
+                            {importantDates.map((item, idx) => (
+                                <tr
+                                    key={idx}
+                                    className={`${item.rowClass} border-t border-[#d0224a]/30`}
+                                >
+                                    <td className="px-6 py-4">{item.event}</td>
+                                    <td className="px-6 py-4">{item.date}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>

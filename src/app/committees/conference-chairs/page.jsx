@@ -2,17 +2,59 @@ import React from "react";
 import AboutHeader from "../../../components/common/AboutHeader";
 import CommitteeMemberGrid from "../../../components/common/CommitteeMemberGrid";
 
-const executiveChairs = [
-    { name: "Dr Haitham Alqahtani", role: "Vice President for Academic Affairs, UTB" },
-    { name: "Dr Narendra Kumar", role: "NIET,NIMS University,India" },
-    { name: "Dr Danilo Ditoy", role: "Dean, CAFS" },
-    { name: "Prof Husham M Ahmed", role: "Research Director, UTB" },
+const chiefPatron = [
+    {
+        name: "Er. Anurag Agarwal",
+        role: "Chief Patron",
+        affiliation: "Chairman, Arya College of Engg. & I.T., Jaipur"
+    }
 ];
 
-const generalChairs = [
-    { name: "Dr Shabana Faizal", role: "Head, DBRC, UTB" },
-    { name: "Dr Nidhi Menon", role: "Assistant Professor, CAFS, UTB" },
-    { name: "Dr Reem Abdalla", role: "Programme Head, BSBI, CAFS, UTB" },
+const chairman = [
+    {
+        name: "Dr. Akhil Pandey",
+        role: "Chairman",
+        affiliation: "Director, AIC, Arya College of Engg. & I.T., Jaipur"
+    }
+];
+
+const advisors = [
+    {
+        name: "Dr. Arun Kumar Arya",
+        role: "Advisor",
+        affiliation: "Principal, Arya College of Engg. & I.T., Jaipur"
+    },
+    {
+        name: "Dr. Ashok Kumar Kajla",
+        role: "Advisor",
+        affiliation: "Professor, Arya College of Engg. & I.T., Jaipur"
+    }
+];
+
+const conveners = [
+    {
+        name: "Dr. Krishan Kant Lavania",
+        role: "Convener",
+        affiliation: "Professor, Arya College of Engg. & I.T., Jaipur"
+    },
+    {
+        name: "Dr. Vishal Shrivastava",
+        role: "Co-Convener",
+        affiliation: "Arya College of Engg. & I.T., Jaipur"
+    },
+    {
+        name: "Mr. Rahul Sharma",
+        role: "Co-Convener",
+        affiliation: "Arya College of Engg. & I.T., Jaipur"
+    }
+];
+
+const organizingSecretary = [
+    {
+        name: "Dr. Vibhakar Pathak",
+        role: "Organizing Secretary",
+        affiliation: "Professor, Arya College of Engg. & I.T., Jaipur"
+    }
 ];
 
 export default function ConferenceChairPage() {
@@ -27,10 +69,35 @@ export default function ConferenceChairPage() {
                 dividerColor="primary"
             />
             <section className="max-w-6xl mx-auto px-4 py-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Executive Chairs</h2>
-                <CommitteeMemberGrid members={executiveChairs} />
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 mt-16">General Chair and Co-Chairs</h2>
-                <CommitteeMemberGrid members={generalChairs} />
+                <h2 className="text-3xl md:text-4xl font-bold mb-8">Chief Patron</h2>
+                <CommitteeMemberGrid members={chiefPatron.map(m => ({
+                    name: m.name,
+                    role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
+                }))} />
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Chairman</h2>
+                <CommitteeMemberGrid members={chairman.map(m => ({
+                    name: m.name,
+                    role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
+                }))} />
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Advisors</h2>
+                <CommitteeMemberGrid members={advisors.map(m => ({
+                    name: m.name,
+                    role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
+                }))} />
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Conveners & Co-Conveners</h2>
+                <CommitteeMemberGrid members={conveners.map(m => ({
+                    name: m.name,
+                    role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
+                }))} />
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Organizing Secretary</h2>
+                <CommitteeMemberGrid members={organizingSecretary.map(m => ({
+                    name: m.name,
+                    role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
+                }))} />
             </section>
         </div>
     );

@@ -4,11 +4,18 @@ import React, { useState } from "react";
 import AboutHeader from "../../components/common/AboutHeader";
 import { RegistrationSchema } from "../../schema/registration-schema";
 
-const paymentOptions = [
-    { price: "200 USD", label: "In-person Registration" },
-    { price: "150 USD", label: "Online Registration" },
-    { price: "50 USD", label: "Attending Without Paper" },
-    { price: "100 USD", label: "Early Bird Registration" },
+// Updated payment options for India and Non-India participants
+const paymentOptionsIndia = [
+    { price: "₹500", label: "Participation and Certificate (without Paper)" },
+    { price: "₹1000", label: "Participation and Certificate (with Paper presentation)" },
+    { price: "₹2000", label: "Participation and Certificate (with Paper publication in Peer Review Journals)" },
+    { price: "₹1000 + Publication Charges", label: "Participation and Certificate (with Paper publication in SCOPUS Proceedings/SCOPUS Journal: Peer Review Journals)" },
+];
+
+const paymentOptionsNonIndia = [
+    { price: "$25", label: "Participation with certificate" },
+    { price: "$120", label: "Participation with publications in SCOPUS Proceedings" },
+    { price: "$20 + APC of the Journal", label: "Participation with publications in SCOPUS Journals" },
 ];
 
 const PriceCard = ({ price, label }) => {
@@ -54,6 +61,7 @@ export default function RegistrationPage() {
     const [status, setStatus] = useState("");
     const [loading, setLoading] = useState(false);
     const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    const [showPaymentDialog, setShowPaymentDialog] = useState(false);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -64,8 +72,9 @@ export default function RegistrationPage() {
         }
     };
 
+    // Instead of redirect, show payment dialog
     const handlePayment = () => {
-        window.open('https://confpay.utb.edu.bh/', '_blank');
+        setShowPaymentDialog(true);
     };
 
     const handleSubmit = async (e) => {
@@ -160,11 +169,26 @@ export default function RegistrationPage() {
                 <div className="h-1.5 md:h-2 w-20 md:w-24 bg-primary mx-auto mb-6"></div>
                 <div className="text-center text-lg font-medium mb-8">Complete your payment and registration process for the conference</div>
                 <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-8 rounded">Payment Information</div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
-                    {paymentOptions.map((option, idx) => (
-                        <PriceCard key={idx} price={option.price} label={option.label} />
-                    ))}
+                
+                {/* Fees Details for India */}
+                <div className="mb-8">
+                    <div className="text-lg font-semibold mb-2 text-primary">Fees Details: For India</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-4">
+                        {paymentOptionsIndia.map((option, idx) => (
+                            <PriceCard key={idx} price={option.price} label={option.label} />
+                        ))}
+                    </div>
                 </div>
+                {/* Fees Details for Non-India */}
+                <div className="mb-8">
+                    <div className="text-lg font-semibold mb-2 text-primary">Fees Details: For Non-India Participants</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-4">
+                        {paymentOptionsNonIndia.map((option, idx) => (
+                            <PriceCard key={idx} price={option.price} label={option.label} />
+                        ))}
+                    </div>
+                </div>
+
                 <div className="flex justify-center mb-8">
                     <button onClick={handlePayment} className="bg-primary text-white font-bold py-3 px-8 rounded hover:bg-primary-dark transition text-lg">
                         Make Payment
@@ -214,6 +238,49 @@ export default function RegistrationPage() {
                     {status && <div className="text-center text-lg mt-4 text-red-600 font-semibold">{status}</div>}
                 </form>
             </div>
+
+            {/* Payment Dialog */}
+            {showPaymentDialog && (
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div className="bg-white rounded-lg p-8 max-w-lg w-full mx-4 shadow-2xl border-2 border-primary relative z-10">
+                        <div className="text-center">
+                            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                                <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />
+                                </svg>
+                            </div>
+                            <h3 className="mt-4 text-xl font-semibold text-gray-900">Bank Payment Details</h3>
+                            <div className="mt-4 text-gray-700 text-left text-base">
+                                <p>
+                                    <b>Bank Name:</b> Arya College of Engineering & I.T.<br />
+                                    <b>Account Number:</b> 1234567890<br />
+                                    <b>IFSC Code:</b> ARYA0001234<br />
+                                    <b>Branch:</b> Jaipur, Rajasthan<br />
+                                    <b>SWIFT Code:</b> ARYAINBBXXX<br />
+                                </p>
+                                <div className="mt-4">
+                                    <b>Instructions:</b>
+                                    <ul className="list-disc list-inside mt-2 text-sm text-gray-800">
+                                        <li>Transfer the registration fee to the above bank account.</li>
+                                        <li>Save the payment transaction ID or reference number.</li>
+                                        <li>Enter the payment ID in the registration form below.</li>
+                                        <li>For any queries, contact <a href="mailto:conference@aryacollege.in" className="text-primary underline">conference@aryacollege.in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="mt-6">
+                                <button
+                                    onClick={() => setShowPaymentDialog(false)}
+                                    className="bg-primary text-white font-semibold px-6 py-2 rounded hover:bg-primary-dark transition"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Success Dialog */}
             {showSuccessDialog && (

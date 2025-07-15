@@ -19,7 +19,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaEnvelope className="text-primary" />
-                                <span><a href="mailto: icitaiit@aryacollege.in "> icitaiit@aryacollege.in</a></span>
+                                <span><a href="mailto: submit@icostem.com "> submit@icostem.com</a></span>
                             </li>
                             <div className="flex space-x-4 pt-2">
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
