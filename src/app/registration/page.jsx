@@ -21,8 +21,8 @@ const paymentOptionsNonIndia = [
 const PriceCard = ({ price, label }) => {
     return (
         <div className="bg-[#18192A] text-white rounded-lg p-8 flex flex-col items-center shadow">
-            <div className="text-3xl font-bold mb-2">{price}</div>
             <div className="text-lg text-center">{label}</div>
+            <div className="text-3xl font-bold mb-2">{price}</div>
         </div>
     );
 };

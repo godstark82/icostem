@@ -4,7 +4,7 @@ import SectionHeader from '../../../components/common/SectionHeader';
 export default function AboutUniversityPage() {
     return (
         <div className="bg-white">
-            <AboutHeader title="University Profile" date="5 - 7 September" image='/images/simdte-white-lg.png' overlayColor='#d0224a' bgImage='/images/utb-images/gallery/gallery-1.jpg'  />
+            <AboutHeader title="College Profile" date="5 - 7 September" image='/images/simdte-white-lg.png' overlayColor='#d0224a' bgImage='/images/utb-images/gallery/gallery-1.jpg'  />
             <div className="container mx-auto px-4 py-16">
             <SectionHeader title="Arya College, Jaipur" />
                 <div className="flex flex-col md:flex-row gap-12 items-start">

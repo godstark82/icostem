@@ -14,10 +14,28 @@ const SPEAKERS = [
         img: "https://picsum.photos/200",
     },
     {
-        name: "Prof. Rakesh Kumar Patel",
+        name: "Prof. Rakesh M Patel",
         affiliation: "Gujrat college of arts and science, Ahmedabad",
         country: "India",
         img: "https://picsum.photos/200",
+    },
+    {
+        name: "Prof Anna Dunay",
+        affiliation: "John Von Neumann University",
+        country: "Hungary",
+        img: "/images/speakers/prof-anna-dunay.jpeg",
+    },
+    {
+        name: "Prof Dorota Jelonek",
+        affiliation: "Czestochowa University of Technology",
+        country: "Poland",
+        img: "/images/speakers/prof-dorota2.jpeg",
+    },
+    {
+        name: "Prof Magdalena Rzemieniak",
+        affiliation: "Lublin University of Technology",
+        country: "Poland",
+        img: "/images/speakers/prof-magdelena.jpeg",
     },
 ];
 
@@ -46,7 +64,7 @@ export default function KeynoteSpeakers() {
         <section className="bg-white">
             <SectionImageHeader title="Keynote Speakers" image="/images/speakers-bg.jpg" />
             <div className="container mx-auto px-4 py-8 md:py-12">
-                <div className="flex flex-row justify-evenly items-stretch flex-wrap gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
                     {SPEAKERS.map((speaker, idx) => (
                         <SpeakerCard key={speaker.name} speaker={speaker} />
                     ))}

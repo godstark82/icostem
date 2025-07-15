@@ -2,25 +2,26 @@ import SectionHeader from "../common/SectionHeader";
 
 const TRACKS = [
     "Artificial Intelligence and Soft Computing",
-    "Artificial Intelligence and Pattern Recognition",
-    "Multimedia Analytics using Machine Learning",
+    "Analytics using Machine Learning",
     "Data Analytics",
-    "Big Data Analytics",
     "Expert Systems",
     "Fuzzy Systems",
     "Computer Vision",
-    "Biometrics",
     "IoT Based Automation",
-    "Embedded System",
     "Robotics",
-    "Industrial Automation over IoT",
-    "Healthcare Automation using ML & DL",
-    "Wireless Sensor Networks",
-    "Mobile Applications",
+    "Industrial Automation",
+    "AI in Healthcare",
     "Algorithms",
-    "Image Processing",
-    "Computer Vision",
-    "Programming Environments",
+    "Mathematics",
+    "Physics",
+    "Chemistry",
+    "Human Resource Management",
+    "Stragic Management",
+    "Marketing Management",
+    "Operations and Supply Chain Management",
+    "Pharmacology",
+    "Biomedical Science",
+    "Agricultural Biotechnology"
 ];
 
 export default function Tracks() {

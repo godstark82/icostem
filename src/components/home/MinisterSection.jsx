@@ -7,8 +7,8 @@ export default function MinisterSection() {
                 {/* Text Section with red rounded bg */}
                 <div className="flex-1 flex flex-col justify-center">
                     <div className="bg-primary rounded-2xl h-full flex flex-col justify-center px-8 py-10 md:py-0 md:min-h-[340px]">
-                        <div className="text-white text-sm md:text-base mb-2 opacity-80">In the Presence of</div>
-                        <div className="text-white text-2xl md:text-3xl font-semibold mb-2">Dr. Sanjeev Kumar</div>
+                        <div className="text-white text-sm md:text-base mb-2 opacity-80">Chief Guest</div>
+                        <div className="text-white text-2xl md:text-3xl font-semibold mb-2">Prof. Sanjeev Kumar</div>
                         <div className="text-white text-base md:text-lg mb-1">Vice Chancellor</div>
                         <div className="text-white text-base md:text-lg mb-6">Maharaja Suhel Dev University, Azamgarh, U.P. India </div>
                         <div className="h-3 w-16 bg-white mb-0 mt-2"></div>

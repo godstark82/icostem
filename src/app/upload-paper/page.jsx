@@ -201,12 +201,12 @@ export default function UploadPaperPage() {
                 <form className="space-y-4" onSubmit={handleSubmit}>
                     <input type="text" name="paperTitle" value={form.paperTitle} onChange={handleChange} placeholder="Paper Title" className="border border-gray-300 rounded px-3 h-10 w-full" required />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" name="uploaderName" value={form.uploaderName} onChange={handleChange} placeholder="Uploader's Full Name" className="border border-gray-300 rounded px-3 h-10" required />
-                        <input type="email" name="uploaderEmail" value={form.uploaderEmail} onChange={handleChange} placeholder="Uploader's Email" className="border border-gray-300 rounded px-3 h-10" required />
-                        <input type="text" name="uploaderAffiliation" value={form.uploaderAffiliation} onChange={handleChange} placeholder="Uploader's Affiliation" className="border border-gray-300 rounded px-3 h-10" required />
+                        <input type="text" name="authorName" value={form.authorName} onChange={handleChange} placeholder="Author's Full Name" className="border border-gray-300 rounded px-3 h-10" required />
+                        <input type="email" name="authorEmail" value={form.authorEmail} onChange={handleChange} placeholder="Author's Email" className="border border-gray-300 rounded px-3 h-10" required />
+                        <input type="text" name="authorAffiliation" value={form.authorAffiliation} onChange={handleChange} placeholder="Author's Affiliation" className="border border-gray-300 rounded px-3 h-10" required />
                         <input type="text" name="uploaderCountry" value={form.uploaderCountry} onChange={handleChange} placeholder="Uploader's Country" className="border border-gray-300 rounded px-3 h-10" required />
                         <div className="flex flex-col gap-2 md:col-span-2">
-                            <label className="block text-sm font-medium text-gray-700">Upload Paper (PDF)</label>
+                            <label className="block text-sm font-medium text-gray-700">Upload Paper (DOCS)</label>
                             <input
                                 type="file"
                                 onChange={handleChange}
@@ -215,12 +215,9 @@ export default function UploadPaperPage() {
                                 required
                             />
                         </div>
-                        <input type="text" name="paperDocumentType" value={form.paperDocumentType} onChange={handleChange} placeholder="Document Type" className="border border-gray-300 rounded px-3 h-10 md:col-span-2" required />
                         <textarea name="paperAbstract" value={form.paperAbstract} onChange={handleChange} placeholder="Abstract" className="border border-gray-300 rounded px-3 py-2 md:col-span-2 min-h-[120px]" required />
-                        <input type="text" name="paperKeywords" value={form.paperKeywords} onChange={handleChange} placeholder="Keywords" className="border border-gray-300 rounded px-3 h-10 md:col-span-2" required />
-                        <input type="text" name="paperTopic" value={form.paperTopic} onChange={handleChange} placeholder="Topic" className="border border-gray-300 rounded px-3 h-10 md:col-span-2" required />
                     </div>
-                    <div className="flex flex-col gap-4">
+                    {/* <div className="flex flex-col gap-4">
                         {form.authors.map((author, index) => (
                             <div key={index} className="flex flex-col gap-2 p-4 border rounded">
                                 <div className="grid grid-cols-3 gap-2">
@@ -281,7 +278,15 @@ export default function UploadPaperPage() {
                             </button>
                         )}
                         <div className="text-xs text-gray-500">4 authors maximum.</div>
-                    </div>
+                    </div> */}
+
+                    <p className="text-center font-bold">
+                    *If you face any technical issues during submission, please email your paper directly to{' '}
+                    <a href="mailto:submit@icostem.com">
+                        submit@icostem.com
+                    </a>
+                    </p>
+
                     <div className="flex justify-center mt-6">
                         <button type="submit" disabled={loading} className="bg-primary text-white font-bold py-3 px-8 rounded hover:bg-primary-dark transition text-lg">
                             {loading ? "Submitting..." : "Submit Paper"}
