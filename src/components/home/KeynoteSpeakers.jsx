@@ -41,12 +41,12 @@ const SPEAKERS = [
 
 function SpeakerCard({ speaker }) {
     return (
-        <div className="bg-[#232335] rounded-md overflow-hidden shadow-md flex flex-col w-[150px] sm:w-[220px] md:w-[275px]">
-            <div className="h-[150px] sm:h-[220px] md:h-[300px] overflow-hidden">
+        <div className="bg-[#232335] rounded-md overflow-hidden shadow-md flex flex-col w-full max-w-[275px]">
+            <div className="h-[300px] overflow-hidden">
                 <img
                     src={speaker.img}
                     alt={speaker.name}
-                    className="w-full h-full "
+                    className="w-full h-full object-cover "
                 />
             </div>
             <div className="bg-[#232335] text-white p-3">
