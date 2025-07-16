@@ -79,7 +79,7 @@ const Header = () => {
                 <nav className="flex justify-between items-center">
                     <div className="text-2xl font-bold text-black">
                         <Link href="/">
-                            <img src="/images/logo.svg" alt="UTB Logo" className="h-12" />
+                            <img src="/images/Logo.svg" alt="Arya Logo" className="h-12" />
                         </Link>
                     </div>
                     <div className="hidden md:flex space-x-6">
