@@ -8,7 +8,6 @@ const organizingCommitteeMembers = [
     { name: "Dr. Prabaht Kumar", role: "(HOD EE), ACEIT, Jaipur" },
     { name: "Dr. Saurabh Bhaskar", role: "(HOD ME), ACEIT, Jaipur" },
     { name: "Shri Ramcharan Sharma", role: "Chief Accountant, ACEIT, Jaipur" },
-    { name: "Dr. Karuna Sharma", role: "IT, ACEIT, Jaipur" },
     { name: "Dr. Devesh Bandil", role: "AI&DS, ACEIT, Jaipur " },
     { name: "Dr. Manoj Kr. Tiwari", role: "CS, ACEIT, Jaipur " },
     { name: "Dr. Rajeev Kumar", role: "CS, ACEIT, Jaipur" },

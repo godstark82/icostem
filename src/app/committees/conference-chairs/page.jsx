@@ -25,9 +25,9 @@ const advisors = [
         affiliation: "Principal, Arya College of Engg. & I.T., Jaipur"
     },
     {
-        name: "Dr. Ashok Kumar Kajla",
-        role: "Advisor",
-        affiliation: "Professor, Arya College of Engg. & I.T., Jaipur"
+        name: "Dr. Akhil Pandey",
+        role: "Chairman",
+        affiliation: "Director, AIC, Arya College of Engg. & I.T., Jaipur"
     }
 ];
 
@@ -46,7 +46,12 @@ const conveners = [
         name: "Mr. Rahul Sharma",
         role: "Co-Convener",
         affiliation: "Arya College of Engg. & I.T., Jaipur"
-    }
+    },
+    {
+        name: "Dr. Ashok Kumar Kajla",
+        role: "Advisor",
+        affiliation: "Professor, Arya College of Engg. & I.T., Jaipur"
+    },
 ];
 
 const organizingSecretary = [
@@ -75,11 +80,11 @@ export default function ConferenceChairPage() {
                     role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
                 }))} />
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Chairman</h2>
+                {/* <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Chairman</h2>
                 <CommitteeMemberGrid members={chairman.map(m => ({
                     name: m.name,
                     role: `${m.role}${m.affiliation ? `, ${m.affiliation}` : ""}`
-                }))} />
+                }))} /> */}
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-16">Advisors</h2>
                 <CommitteeMemberGrid members={advisors.map(m => ({

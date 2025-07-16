@@ -11,11 +11,12 @@ const Footer = () => {
                         <ul className="space-y-3 text-light/80">
                             <li className='flex items-center gap-2'>
                                 <FaMapMarkerAlt className="text-primary size-7" />
-                                <p>Arya College, Jaipur, Kukas SP-40, RIICO Industrial Area, Kukas, Jaipur, Rajasthan, 302028</p>
+                                <p>(Arya 1st Old Campus, Estd Yr 2000)
+                                SP-42, RIICO Industrial Area, Kukas,Delhi Road, Near Hotel Le-Meridian, Jaipur, Rajasthan - 302028</p>
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaPhone className="text-primary" />
-                                <a href="https://wa.me/8949232048" target="_blank" rel="noopener noreferrer"><span>+91 8949232048</span></a>
+                                <a href="https://wa.me/8209346745" target="_blank" rel="noopener noreferrer"><span>+91 8209346745</span></a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <FaEnvelope className="text-primary" />
@@ -99,7 +100,7 @@ const Footer = () => {
                         <h3 className="text-xl font-bold text-white">Conference Venue</h3>
                         <div className="aspect-w-16 aspect-h-9 w-full">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.010604890812!2d75.89097488041605!3d27.029830829634673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396daff75daffa4d%3A0x3b7007c44ebf96df!2sArya%20Main%20Campus!5e0!3m2!1sen!2sin!4v1752416379856!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56864.16959199051!2d75.893566!3d27.029831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396daf9e6f4d2f3b%3A0x5b28af6fe5c60627!2sArya%20College%20of%20Engineering%20%26%20IT!5e0!3m2!1sen!2sin!4v1752660851935!5m2!1sen!2sin"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0 }}

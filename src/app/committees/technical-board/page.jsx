@@ -33,7 +33,7 @@ export default function ReviewCommitteePage() {
         <div className="min-h-screen bg-white">
             <AboutHeader
                 title="Committees"
-                date="5 - 7 September"
+                date="6 - 7 September"
                 image="/images/simdte-white-lg.png"
                 overlayColor="#1a1a2e"
                 bgImage="/images/utb-images/gallery/gallery-2.jpg"

@@ -5,7 +5,7 @@ const SPEAKERS = [
         name: "Dr. Jaya Sinha",
         affiliation: "Engineering College, Greater Noida",
         country: "India",
-        img: "https://picsum.photos/200",
+        img: "/images/arya-images/jaya-sinha.webp",
     },
     {
         name: "Dr. Nevine Makramlabib Egypt",
