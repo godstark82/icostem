@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaClock, FaPhoneAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaClock, FaPhoneAlt } from 'react-icons/fa';
 
 const TopBar = () => {
     const now = new Date();
@@ -23,17 +23,20 @@ const TopBar = () => {
                             <span className='text-black font-bold'><a href="https://wa.me/8209346745" target="_blank" rel="noopener noreferrer">+91 8209346745</a></span>
                         </div>
                         <div className="flex space-x-2">
-                            <a href="https://facebook.com " target='_blank' className="hover:text-secondary transition-colors" aria-label="Facebook">
+                            <a href="https://www.facebook.com/aryacollegein/" target='_blank' className="hover:text-secondary transition-colors" aria-label="Facebook">
                                 <FaFacebook className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
                             </a>
-                            <a href="https://x.com" target='_blank' className="hover:text-secondary transition-colors" aria-label="Twitter">
+                            <a href="https://x.com/aryacolleges" target='_blank' className="hover:text-secondary transition-colors" aria-label="Twitter">
                                 <FaTwitter className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
                             </a>
-                            <a href="#" className="hover:text-secondary transition-colors" aria-label="Instagram">
+                            <a href="https://www.instagram.com/aryacollege/" className="hover:text-secondary transition-colors" aria-label="Instagram">
                                 <FaInstagram className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
                             </a>
-                            <a href="#" className="hover:text-secondary transition-colors" aria-label="LinkedIn">
+                            <a href="https://in.linkedin.com/school/aryacollege/" className="hover:text-secondary transition-colors" aria-label="LinkedIn">
                                 <FaLinkedin className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
+                            </a>
+                            <a href="https://www.youtube.com/user/AryaColleges" className="hover:text-secondary transition-colors" aria-label="YouTube">
+                                <FaYoutube className='inline-block bg-primary text-white rounded h-6 w-6 p-1' />
                             </a>
                         </div>
                     </div>

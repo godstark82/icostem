@@ -23,19 +23,19 @@ const Footer = () => {
                                 <span><a href="mailto: submit@icostem.com "> submit@icostem.com</a></span>
                             </li>
                             <div className="flex space-x-4 pt-2">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
+                                <a href="https://www.facebook.com/aryacollegein/" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
                                     <FaFacebookF size={20} />
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
+                                <a href="https://x.com/aryacolleges" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
                                     <FaTwitter size={20} />
                                 </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
+                                <a href="https://in.linkedin.com/school/aryacollege/" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
                                     <FaLinkedin size={20} />
                                 </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
+                                <a href="https://www.instagram.com/aryacollege/" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
                                     <FaInstagram size={20} />
                                 </a>
-                                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
+                                <a href="https://www.youtube.com/user/AryaColleges" target="_blank" rel="noopener noreferrer" className="text-light/80 hover:text-primary transition-colors">
                                     <FaYoutube size={20} />
                                 </a>
                             </div>
