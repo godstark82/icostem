@@ -6,11 +6,7 @@ const partners = [
     image: "https://picsum.photos/id/1011/200/200",
     type: "TECHNICAL PARTNER",
   },
-  {
-    name: "THE INSTITUTION OF ENGINEERING (INDIA)",
-    image: "https://picsum.photos/id/1012/200/200",
-    type: "TECHNICAL PARTNER",
-  },
+
 ];
 
 const Patners = () => {
