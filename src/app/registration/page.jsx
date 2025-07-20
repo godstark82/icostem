@@ -253,11 +253,11 @@ export default function RegistrationPage() {
                             <h3 className="mt-4 text-xl font-semibold text-gray-900">Bank Payment Details</h3>
                             <div className="mt-4 text-gray-700 text-left text-base">
                                 <p>
-                                    <b>Bank Name:</b> Arya College of Engineering & I.T.<br />
-                                    <b>Account Number:</b> 1234567890<br />
-                                    <b>IFSC Code:</b> ARYA0001234<br />
+                                    <b>Bank Name:</b> Axis Bank<br />
+                                    <b>Account Number:</b> 925020013662464<br />
+                                    <b>IFSC Code:</b> UTIB0005634<br />
                                     <b>Branch:</b> Jaipur, Rajasthan<br />
-                                    <b>SWIFT Code:</b> ARYAINBBXXX<br />
+                                    {/* <b>SWIFT Code:</b> ARYAINBBXXX<br /> */}
                                 </p>
                                 <div className="mt-4">
                                     <b>Instructions:</b>
@@ -265,7 +265,7 @@ export default function RegistrationPage() {
                                         <li>Transfer the registration fee to the above bank account.</li>
                                         <li>Save the payment transaction ID or reference number.</li>
                                         <li>Enter the payment ID in the registration form below.</li>
-                                        <li>For any queries, contact <a href="mailto:conference@aryacollege.in" className="text-primary underline">conference@aryacollege.in</a></li>
+                                        <li>For any queries, contact <a href="mailto:submit@icostem.com" className="text-primary underline">submit@icostem.com</a></li>
                                     </ul>
                                 </div>
                             </div>
