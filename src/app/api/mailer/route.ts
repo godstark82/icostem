@@ -22,14 +22,21 @@ export async function POST(req: Request) {
       );
     }
 
+    // Append Mailofly attribution to the bottom of the email body
+    const attribution = `\n\n--\nMail Sent by <a href="https://mailofly.redevs.atmam.org" target="_blank" rel="noopener noreferrer">Mailofly</a>`;
+    // If the email is plain text, the link will not be clickable, but we follow the instruction.
+    const textWithAttribution = `${text}${attribution}`;
+
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `ICOSTEM <${process.env.EMAIL_USER}>`,
       to,
       subject,
-      text
+      text: textWithAttribution
     };
 
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail({
+      ...mailOptions,
+    });
 
     return NextResponse.json(
       { message: 'Email sent successfully' },

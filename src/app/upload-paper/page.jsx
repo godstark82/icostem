@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import AboutHeader from "../../components/common/AboutHeader";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "../../components/ui/dialog";
+import { Button } from "../../components/ui/button";
 
 // Email templates
 const successEmailTemplate = (name, title) => `Dear ${name},
@@ -17,18 +19,10 @@ export default function UploadPaperPage() {
         paperTitle: "",
         paperAbstract: "",
         paperKeywords: "",
-        paperDocumentType: "",
-        paperTopic: "",
-        authors: [{
-            name: "",
-            affiliation: "",
-            email: "",
-            isCorresponding: false
-        }],
         uploadedFile: null,
-        uploaderName: "",
-        uploaderEmail: "",
-        uploaderAffiliation: "",
+        authorName: "",
+        authorEmail: "",
+        authorAffiliation: "",
         uploaderCountry: "",
     });
     const [status, setStatus] = useState("");
@@ -44,29 +38,6 @@ export default function UploadPaperPage() {
         }
     };
 
-    const handleAuthorChange = (index, field, value) => {
-        setForm(prev => {
-            const newAuthors = [...prev.authors];
-            newAuthors[index] = { ...newAuthors[index], [field]: value };
-            return { ...prev, authors: newAuthors };
-        });
-    };
-
-    const addAuthor = () => {
-        if (form.authors.length < 4) {
-            setForm(prev => ({
-                ...prev,
-                authors: [...prev.authors, { name: "", affiliation: "", email: "", isCorresponding: false }]
-            }));
-        }
-    };
-
-    const removeAuthor = (index) => {
-        setForm(prev => ({
-            ...prev,
-            authors: prev.authors.filter((_, i) => i !== index)
-        }));
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -77,14 +48,10 @@ export default function UploadPaperPage() {
             const formData = new FormData();
             formData.append("paperTitle", form.paperTitle);
             formData.append("paperAbstract", form.paperAbstract);
-            formData.append("paperKeywords", form.paperKeywords);
-            formData.append("paperDocumentType", form.paperDocumentType);
-            formData.append("paperTopic", form.paperTopic);
-            formData.append("authors", JSON.stringify(form.authors));
             formData.append("uploadedFile", form.uploadedFile);
-            formData.append("uploaderName", form.uploaderName);
-            formData.append("uploaderEmail", form.uploaderEmail);
-            formData.append("uploaderAffiliation", form.uploaderAffiliation);
+            formData.append("authorName", form.authorName);
+            formData.append("authorEmail", form.authorEmail);
+            formData.append("authorAffiliation", form.authorAffiliation);
             formData.append("uploaderCountry", form.uploaderCountry);
 
             const res = await fetch("/api/paper-upload", {
@@ -105,9 +72,9 @@ export default function UploadPaperPage() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    to: form.uploaderEmail,
+                    to: form.authorEmail,
                     subject: "Paper Submission Successful - ICOSTEM 2025",
-                    text: successEmailTemplate(form.uploaderName, form.paperTitle)
+                    text: successEmailTemplate(form.authorName, form.paperTitle)
                 })
             });
 
@@ -116,19 +83,10 @@ export default function UploadPaperPage() {
             setForm({
                 paperTitle: "",
                 paperAbstract: "",
-                paperKeywords: "",
-                paperDocumentType: "",
-                paperTopic: "",
-                authors: [{
-                    name: "",
-                    affiliation: "",
-                    email: "",
-                    isCorresponding: false
-                }],
                 uploadedFile: null,
-                uploaderName: "",
-                uploaderEmail: "",
-                uploaderAffiliation: "",
+                authorName: "",
+                authorEmail: "",
+                authorAffiliation: "",
                 uploaderCountry: "",
             });
         } catch (error) {
@@ -206,132 +164,58 @@ export default function UploadPaperPage() {
                         <input type="text" name="authorAffiliation" value={form.authorAffiliation} onChange={handleChange} placeholder="Author's Affiliation" className="border border-gray-300 rounded px-3 h-10" required />
                         <input type="text" name="uploaderCountry" value={form.uploaderCountry} onChange={handleChange} placeholder="Uploader's Country" className="border border-gray-300 rounded px-3 h-10" required />
                         <div className="flex flex-col gap-2 md:col-span-2">
-                            <label className="block text-sm font-medium text-gray-700">Upload Paper (DOCS)</label>
+                            <label className="block text-sm font-medium text-gray-700">Upload Paper (DOCX)</label>
                             <input
                                 type="file"
                                 onChange={handleChange}
                                 className="border border-gray-300 rounded px-3 h-10"
-                                accept="application/pdf"
+                                accept="application/docx"
                                 required
                             />
                         </div>
                         <textarea name="paperAbstract" value={form.paperAbstract} onChange={handleChange} placeholder="Abstract" className="border border-gray-300 rounded px-3 py-2 md:col-span-2 min-h-[120px]" required />
                     </div>
-                    {/* <div className="flex flex-col gap-4">
-                        {form.authors.map((author, index) => (
-                            <div key={index} className="flex flex-col gap-2 p-4 border rounded">
-                                <div className="grid grid-cols-3 gap-2">
-                                    <input
-                                        type="text"
-                                        value={author.name}
-                                        onChange={(e) => handleAuthorChange(index, 'name', e.target.value)}
-                                        placeholder="Author's Name"
-                                        className="border border-gray-300 rounded px-3 h-10"
-                                        required
-                                    />
-                                    <input
-                                        type="text"
-                                        value={author.affiliation}
-                                        onChange={(e) => handleAuthorChange(index, 'affiliation', e.target.value)}
-                                        placeholder="Affiliation"
-                                        className="border border-gray-300 rounded px-3 h-10"
-                                        required
-                                    />
-                                    <input
-                                        type="email"
-                                        value={author.email}
-                                        onChange={(e) => handleAuthorChange(index, 'email', e.target.value)}
-                                        placeholder="Email"
-                                        className="border border-gray-300 rounded px-3 h-10"
-                                        required
-                                    />
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <input
-                                            type="checkbox"
-                                            checked={author.isCorresponding}
-                                            onChange={(e) => handleAuthorChange(index, 'isCorresponding', e.target.checked)}
-                                            className="accent-primary"
-                                        />
-                                        <label className="text-sm">Corresponding author</label>
-                                    </div>
-                                    {index > 0 && (
-                                        <button
-                                            type="button"
-                                            onClick={() => removeAuthor(index)}
-                                            className="text-red-500 text-sm hover:text-red-700"
-                                        >
-                                            Remove
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                        {form.authors.length < 4 && (
-                            <button
-                                type="button"
-                                onClick={addAuthor}
-                                className="bg-gray-200 text-gray-800 rounded px-3 py-1 text-sm font-medium w-fit hover:bg-gray-300"
-                            >
-                                Add Another Author
-                            </button>
-                        )}
-                        <div className="text-xs text-gray-500">4 authors maximum.</div>
-                    </div> */}
-
                     <p className="text-center font-bold">
-                    *If you face any technical issues during submission, please email your paper directly to{' '}
-                    <a href="mailto:submit@icostem.com">
-                        submit@icostem.com
-                    </a>
+                        *If you face any technical issues during submission, please email your paper directly to{' '}
+                        <a href="mailto:submit@icostem.com">
+                            submit@icostem.com
+                        </a>
                     </p>
 
                     <div className="flex justify-center mt-6">
-                        <button type="submit" disabled={loading} className="bg-primary text-white font-bold py-3 px-8 rounded hover:bg-primary-dark transition text-lg">
+                        <Button type="submit"  disabled={loading} className="text-lg text-white">
                             {loading ? "Submitting..." : "Submit Paper"}
-                        </button>
+                        </Button>
                     </div>
                     {status && <div className="text-center text-lg mt-4 text-primary font-semibold">{status}</div>}
                 </form>
             </div>
             {/* Confirmation Modal */}
-            {showModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white rounded-lg shadow-lg max-w-lg w-full p-8 relative">
-                        <div className="bg-primary text-white text-center text-xl font-bold py-3 mb-6 rounded">
+            <Dialog open={showModal} onOpenChange={setShowModal}>
+                <DialogContent showCloseButton>
+                    <DialogHeader>
+                        <DialogTitle className="bg-primary text-white text-center text-xl font-bold py-3 mb-6 rounded">
                             CONFIRMATION OF SUBMISSION
-                        </div>
-                        <div className="text-center mb-6">
-                            <h2 className="text-lg font-bold mb-2">Thank You for Your Submission</h2>
-                            <p className="mb-2">
-                                Your paper has been successfully submitted to Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025), hosted by Arya College, Jaipur.
-                            </p>
-                            <p className="mb-2">
-                                We appreciate your contribution and look forward to reviewing your work.<br />
-                                Notifications of acceptance will be sent via email no later than 15 September 2025.
-                            </p>
-                            <p className="mb-4">
-                                Please proceed with your conference registration and payment by clicking the link below:
-                            </p>
-                            <a
-                                href="/payment-link"
-                                className="inline-block bg-primary text-white px-6 py-3 rounded font-bold text-lg mb-2"
-                            >
-                                Proceed to Payment
-                            </a>
-                            <div className="text-sm text-gray-600 mt-2">Stay tuned for updates.</div>
-                        </div>
-                        <button
-                            onClick={() => setShowModal(false)}
-                            className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-2xl font-bold"
-                            aria-label="Close"
-                        >
-                            &times;
-                        </button>
+                        </DialogTitle>
+                    </DialogHeader>
+                    <div className="text-center mb-6">
+                        <h2 className="text-lg font-bold mb-2">Thank You for Your Submission</h2>
+                        <p className="mb-2">
+                            Your paper has been successfully submitted to Sustainable Innovations in Management in the Digital Transformation Era (ICOSTEM 2025), hosted by Arya College, Jaipur.
+                        </p>
+                        <p className="mb-2">
+                            We appreciate your contribution and look forward to reviewing your work.<br />
+                            Notifications of acceptance will be sent via email no later than 15 September 2025.
+                        </p>
+                        <div className="text-sm text-gray-600 mt-2">Stay tuned for updates.</div>
                     </div>
-                </div>
-            )}
+                    <DialogFooter>
+                        <DialogClose asChild>
+                            <Button className="w-full text-white">Close</Button>
+                        </DialogClose>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </div>
     );
 }

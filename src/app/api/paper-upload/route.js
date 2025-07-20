@@ -1,7 +1,5 @@
 // pages/api/paper-upload.js
 import { NextResponse } from 'next/server';
-import formidable from 'formidable';
-import fs from 'fs/promises';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../../../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -10,7 +8,6 @@ export async function POST(request) {
     try {
         const formData = await request.formData();
         const file = formData.get('uploadedFile');
-        const authors = JSON.parse(formData.get('authors'));
 
         if (!file) {
             return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
@@ -29,10 +26,6 @@ export async function POST(request) {
         const paperData = {
             paperTitle: formData.get('paperTitle'),
             paperAbstract: formData.get('paperAbstract'),
-            paperKeywords: formData.get('paperKeywords'),
-            paperDocumentType: formData.get('paperDocumentType'),
-            paperTopic: formData.get('paperTopic'),
-            authors: authors,
             fileUrl,
             uploadedAt: serverTimestamp(),
             uploadedFile: file.name,
