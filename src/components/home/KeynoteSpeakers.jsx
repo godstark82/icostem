@@ -43,6 +43,24 @@ const SPEAKERS = [
         country: "Indonesia",
         img: "/images/speakers/andi.jpg",
     },
+    {
+        name: "Prof. (Dr.) Prakash Kumar Jha",
+        affiliation: "Mississippi State University USA",
+        country: "India",
+        img: "/images/speakers/prakash-kumar-jha.jpg",
+    },
+    {
+        name: "Dr. Budesh Kanwer",
+        affiliation: "Professor & Head , Dept AI & DS Poornima Institute of Engineering & Technology",
+        country: "India",
+        img: "/images/speakers/budesh-kanwer.jpg",
+    },
+    {
+        name: "Abdul Wafi",
+        affiliation: "State Islamic University of Madura",
+        country: "Indonesia",
+        img: "/images/speakers/abdul-wafi.jpg",
+    },
 ];
 
 function SpeakerCard({ speaker }) {
