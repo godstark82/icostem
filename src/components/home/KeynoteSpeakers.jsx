@@ -61,6 +61,54 @@ const SPEAKERS = [
         country: "Indonesia",
         img: "/images/speakers/abdul-wafi.jpg",
     },
+    {
+        name: "Dr. Indu sharma",
+        affiliation: "NIET, NIMS University, Jaipur",
+        country: "India",
+        img: "/images/speakers/dr-indu-sharma.jpg",
+    },
+    {
+        name: "Prof. (Dr.) Anirudh Gupta",
+        affiliation: "NIET, NIMS University, Jaipur",
+        country: "India",
+        img: "images/speakers/anirudh-gupta.webp",
+    },
+    {
+        name: "Dr. Chetali Agrawal",
+        affiliation: "Mewar University, Chittorgarh",
+        country: "India",
+        img: "https://picsum.photos/200",
+    },
+    {
+        name: "Prof. (Dr.) A. K. Saini",
+        affiliation: "ICFAI University Jaipur",
+        country: "India",
+        img: "images/speakers/ak-saini.webp",
+    },
+    {
+        name: "Prof. (Dr.) Leszek Ziora",
+        affiliation: "Scientist at Czestochowa Technical University",
+        country: "Poland",
+        img: "images/speakers/prof-leszek-ziora.jpeg",
+    },
+    {
+        name: "Prof. (Dr.) Tomasz Turek",
+        affiliation: "Czestochowa University of Technology",
+        country: "Poland",
+        img: "https://picsum.photos/200",
+    },
+    {
+        name: "Prof. (Dr.) Damian",
+        affiliation: "",
+        country: "",
+        img: "https://picsum.photos/200",
+    },
+    {
+        name: "Prof. (Dr.) Jona Liks",
+        affiliation: "",
+        country: "",
+        img: "https://picsum.photos/200",
+    },
 ];
 
 function SpeakerCard({ speaker }) {
@@ -88,7 +136,7 @@ export default function KeynoteSpeakers() {
         <section className="bg-white">
             <SectionImageHeader title="Keynote Speakers" image="/images/speakers-bg.jpg" />
             <div className="container mx-auto px-4 py-8 md:py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 justify-items-center">
                     {SPEAKERS.map((speaker, idx) => (
                         <SpeakerCard key={speaker.name} speaker={speaker} />
                     ))}
