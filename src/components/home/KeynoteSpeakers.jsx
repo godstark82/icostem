@@ -5,7 +5,7 @@ const SPEAKERS = [
         name: "Dr. Jaya Sinha",
         affiliation: "Engineering College, Greater Noida",
         country: "India",
-        img: "/images/arya-images/jaya-sinha.webp",
+        img: "/images/speakers/jaya-sinha.webp",
     },
     {
         name: "Dr. Nevine Makramlabib Egypt",
@@ -17,7 +17,7 @@ const SPEAKERS = [
         name: "Prof. Rakesh M Patel",
         affiliation: "Gujrat college of arts and science, Ahmedabad",
         country: "India",
-        img: "https://picsum.photos/200",
+        img: "/images/speakers/rakesh-m-patel.jpg",
     },
     {
         name: "Prof Anna Dunay",
@@ -95,7 +95,7 @@ const SPEAKERS = [
         name: "Prof. (Dr.) Tomasz Turek",
         affiliation: "Czestochowa University of Technology",
         country: "Poland",
-        img: "https://picsum.photos/200",
+        img: "/images/speakers/dr-tomasz-turek.jpg",
     },
     {
         name: "Prof. (Dr.) Damian",
