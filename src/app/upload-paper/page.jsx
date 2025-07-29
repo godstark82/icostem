@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import AboutHeader from "../../components/common/AboutHeader";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "../../components/ui/dialog";
 import { Button } from "../../components/ui/button";
+import PaperUploadSchema from "../../schema/paper-upload-schema";
 
 // Email templates
 const successEmailTemplate = (name, title) => `Dear ${name},
@@ -45,14 +46,25 @@ export default function UploadPaperPage() {
         setStatus("");
 
         try {
+            // Validate form data against schema
+            const validatedData = PaperUploadSchema.parse({
+                paperTitle: form.paperTitle,
+                paperAbstract: form.paperAbstract,
+                uploadedFile: form.uploadedFile,
+                authorName: form.authorName,
+                authorEmail: form.authorEmail,
+                authorAffiliation: form.authorAffiliation,
+                authorCountry: form.uploaderCountry,
+            });
+
             const formData = new FormData();
-            formData.append("paperTitle", form.paperTitle);
-            formData.append("paperAbstract", form.paperAbstract);
-            formData.append("uploadedFile", form.uploadedFile);
-            formData.append("authorName", form.authorName);
-            formData.append("authorEmail", form.authorEmail);
-            formData.append("authorAffiliation", form.authorAffiliation);
-            formData.append("uploaderCountry", form.uploaderCountry);
+            formData.append("paperTitle", validatedData.paperTitle);
+            formData.append("paperAbstract", validatedData.paperAbstract);
+            formData.append("uploadedFile", validatedData.uploadedFile);
+            formData.append("authorName", validatedData.authorName);
+            formData.append("authorEmail", validatedData.authorEmail);
+            formData.append("authorAffiliation", validatedData.authorAffiliation);
+            formData.append("authorCountry", validatedData.authorCountry);
 
             const res = await fetch("/api/paper-upload", {
                 method: "POST",
@@ -183,7 +195,7 @@ export default function UploadPaperPage() {
                     </p>
 
                     <div className="flex justify-center mt-6">
-                        <Button type="submit"  disabled={loading} className="text-lg text-white">
+                        <Button type="submit" disabled={loading} className="text-lg text-white">
                             {loading ? "Submitting..." : "Submit Paper"}
                         </Button>
                     </div>

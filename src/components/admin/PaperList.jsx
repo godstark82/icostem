@@ -84,12 +84,15 @@ export default function PaperList({ papers, onRefresh, onDelete }) {
                             </td>
                             <td className="px-6 py-4">
                                 <div className="text-sm text-gray-900">
-                                    {paper.authors.map(author => author.name).join(', ')}
+                                    {paper.authorName || 'N/A'}
+                                </div>
+                                <div className="text-sm text-gray-500">
+                                    {paper.authorAffiliation || 'N/A'}
                                 </div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="text-sm text-gray-900">{paper.uploaderName}</div>
-                                <div className="text-sm text-gray-500">{paper.uploaderEmail}</div>
+                                <div className="text-sm text-gray-900">{paper.authorName || 'N/A'}</div>
+                                <div className="text-sm text-gray-500">{paper.authorEmail || 'N/A'}</div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
                                 <div className="relative">

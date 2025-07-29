@@ -19,7 +19,7 @@ const Header = () => {
             "Technical Board": "Technical Advisory Board",
             // "Other Committees": "Other Committees",
         },
-        "REGISTRATION": "REGISTRATION",
+        "REGISTRATION": "REGISTRATION/PAYMENT",
         "UPLOAD PAPER": "UPLOAD PAPER",
         "DOWNLOADS": "DOWNLOADS",
         "CONTACT US": "CONTACT US"

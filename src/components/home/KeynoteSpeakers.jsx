@@ -8,12 +8,6 @@ const SPEAKERS = [
         img: "/images/speakers/jaya-sinha.webp",
     },
     {
-        name: "Dr. Nevine Makramlabib Egypt",
-        affiliation: "Cairo University",
-        country: "Egypt",
-        img: "https://picsum.photos/200",
-    },
-    {
         name: "Prof. Rakesh M Patel",
         affiliation: "Gujrat college of arts and science, Ahmedabad",
         country: "India",
@@ -83,7 +77,7 @@ const SPEAKERS = [
         name: "Prof. (Dr.) A. K. Saini",
         affiliation: "ICFAI University Jaipur",
         country: "India",
-        img: "images/speakers/ak-saini.webp",
+        img: "images/speakers/ak-saini.jpg",
     },
     {
         name: "Prof. (Dr.) Leszek Ziora",
@@ -108,6 +102,34 @@ const SPEAKERS = [
         affiliation: "",
         country: "",
         img: "https://picsum.photos/200",
+    },
+    {
+        name: "Prof. (Dr.) Sonalika Singh",
+        affiliation: "NIMS University, Jaipur",
+        country: "India",
+        img: "/images/speakers/sonalika_singh.jpg",
+    },
+    {
+        name: "Prof. (Dr.) Monalika Bota",
+        affiliation: "",
+        country: "",
+        img: "/images/speakers/monalika_bota.jpg",
+    },
+    {
+        name: "Prof. (Dr.) Liliana Guran",
+        affiliation: "",
+        country: "",
+        img: "/images/speakers/liliana.jpg",
+    },{
+        name: "Prof. (Dr.) Illona Paweloszek",
+        affiliation: "",
+        country: "",
+        img: "/images/speakers/ilona.jpg",
+    },{
+        name: "Prof. (Dr.) Dalia Younis",
+        affiliation: "",
+        country: "",
+        img: "/images/speakers/dalia.jpg",
     },
 ];
 
