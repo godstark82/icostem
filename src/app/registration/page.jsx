@@ -4,6 +4,18 @@ import React, { useState } from "react";
 import AboutHeader from "../../components/common/AboutHeader";
 import { RegistrationSchema } from "../../schema/registration-schema";
 
+// Import shadcn dialog components
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+
 // Updated payment options for India and Non-India participants
 const paymentOptionsIndia = [
     { price: "₹500", label: "Participation and Certificate (without Paper)" },
@@ -190,9 +202,63 @@ export default function RegistrationPage() {
                 </div>
 
                 <div className="flex justify-center mb-8">
-                    <button onClick={handlePayment} className="bg-primary text-white font-bold py-3 px-8 rounded hover:bg-primary-dark transition text-lg">
-                        Make Payment
-                    </button>
+                    {/* Use shadcn Dialog for Make Payment */}
+                    <Dialog open={showPaymentDialog} onOpenChange={setShowPaymentDialog}>
+                        <DialogTrigger asChild>
+                            <button
+                                onClick={handlePayment}
+                                className="bg-primary text-white font-bold py-3 px-8 rounded hover:bg-primary-dark transition text-lg"
+                            >
+                                Make Payment
+                            </button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-lg w-full">
+                            <DialogHeader>
+                                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                                    <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />
+                                    </svg>
+                                </div>
+                                <DialogTitle className="mt-4 text-xl font-semibold text-gray-900 text-center">
+                                    Bank Payment Details
+                                </DialogTitle>
+                            </DialogHeader>
+                            <DialogDescription asChild>
+                                <div className="mt-4 text-gray-700 text-left text-base">
+                                    <p>
+                                        <b>Bank Name:</b> ATMAM EDUTECH PUBLICATIONS PRIVATE LIMITED <br />
+                                        <b>Account Number:</b> 925020013662464<br />
+                                        <b>IFSC Code:</b> UTIB0005634<br />
+                                        <b>Branch:</b>MADHYAM MARG JA JAI RJ, Jaipur, 302020<br />
+                                        {/* <b>SWIFT Code:</b> ARYAINBBXXX<br /> */}
+                                    </p>
+                                    <div className="mt-4">
+                                        <b>Instructions:</b>
+                                        <ul className="list-disc list-inside mt-2 text-sm text-gray-800">
+                                            <li>Transfer the registration fee to the above bank account.</li>
+                                            <li>Save the payment transaction ID or reference number.</li>
+                                            <li>Enter the payment ID in the registration form below.</li>
+                                            <li>
+                                                For any queries, contact{" "}
+                                                <a href="mailto:submit@icostem.com" className="text-primary underline">
+                                                    submit@icostem.com
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </DialogDescription>
+                            <DialogFooter className="mt-6 flex justify-center">
+                                <DialogClose asChild>
+                                    <button
+                                        className="bg-primary text-white font-semibold px-6 py-2 rounded hover:bg-primary-dark transition"
+                                    >
+                                        Close
+                                    </button>
+                                </DialogClose>
+                            </DialogFooter>
+                        </DialogContent>
+                    </Dialog>
                 </div>
                 <div className="bg-gray-100 border-l-4 border-primary p-4 mb-10 text-sm text-gray-800">
                     <b>Note:</b> Please complete the payment first and enter the payment ID in the registration form below.
@@ -238,49 +304,6 @@ export default function RegistrationPage() {
                     {status && <div className="text-center text-lg mt-4 text-red-600 font-semibold">{status}</div>}
                 </form>
             </div>
-
-            {/* Payment Dialog */}
-            {showPaymentDialog && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                    <div className="bg-white rounded-lg p-8 max-w-lg w-full mx-4 shadow-2xl border-2 border-primary relative z-10">
-                        <div className="text-center">
-                            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
-                                <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />
-                                </svg>
-                            </div>
-                            <h3 className="mt-4 text-xl font-semibold text-gray-900">Bank Payment Details</h3>
-                            <div className="mt-4 text-gray-700 text-left text-base">
-                                <p>
-                                    <b>Bank Name:</b> Axis Bank<br />
-                                    <b>Account Number:</b> 925020013662464<br />
-                                    <b>IFSC Code:</b> UTIB0005634<br />
-                                    <b>Branch:</b> Jaipur, Rajasthan<br />
-                                    {/* <b>SWIFT Code:</b> ARYAINBBXXX<br /> */}
-                                </p>
-                                <div className="mt-4">
-                                    <b>Instructions:</b>
-                                    <ul className="list-disc list-inside mt-2 text-sm text-gray-800">
-                                        <li>Transfer the registration fee to the above bank account.</li>
-                                        <li>Save the payment transaction ID or reference number.</li>
-                                        <li>Enter the payment ID in the registration form below.</li>
-                                        <li>For any queries, contact <a href="mailto:submit@icostem.com" className="text-primary underline">submit@icostem.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="mt-6">
-                                <button
-                                    onClick={() => setShowPaymentDialog(false)}
-                                    className="bg-primary text-white font-semibold px-6 py-2 rounded hover:bg-primary-dark transition"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
 
             {/* Success Dialog */}
             {showSuccessDialog && (
