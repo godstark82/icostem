@@ -92,12 +92,6 @@ const SPEAKERS = [
         img: "/images/speakers/dr-tomasz-turek.jpg",
     },
     {
-        name: "Prof. (Dr.) Damian",
-        affiliation: "",
-        country: "",
-        img: "https://picsum.photos/200",
-    },
-    {
         name: "Prof. (Dr.) Jona Liks",
         affiliation: "",
         country: "",
