@@ -92,37 +92,27 @@ const SPEAKERS = [
         img: "/images/speakers/dr-tomasz-turek.jpg",
     },
     {
-        name: "Prof. (Dr.) Jona Liks",
-        affiliation: "",
-        country: "",
-        img: "https://picsum.photos/200",
-    },
-    {
         name: "Prof. (Dr.) Sonalika Singh",
         affiliation: "NIMS University, Jaipur",
         country: "India",
         img: "/images/speakers/sonalika_singh.jpg",
     },
     {
-        name: "Prof. (Dr.) Monalika Bota",
-        affiliation: "",
-        country: "",
+        name: "Prof. (Dr.) Monika Bota Felicia",
+        affiliation: "Babes-Bolyai University, Cluj-Napoca",
+        country: "Europe",
         img: "/images/speakers/monalika_bota.jpg",
     },
     {
         name: "Prof. (Dr.) Liliana Guran",
-        affiliation: "",
-        country: "",
+        affiliation: " Babeș-Bolyai University, Cluj-Napoca",
+        country: "Europe",
         img: "/images/speakers/liliana.jpg",
-    },{
-        name: "Prof. (Dr.) Illona Paweloszek",
-        affiliation: "",
-        country: "",
-        img: "/images/speakers/ilona.jpg",
-    },{
+    },
+    {
         name: "Prof. (Dr.) Dalia Younis",
-        affiliation: "",
-        country: "",
+        affiliation: "College of International Transport and Logistics Arab Academy",
+        country: "Egypt",
         img: "/images/speakers/dalia.jpg",
     },
 ];
