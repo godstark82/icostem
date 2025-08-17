@@ -69,6 +69,26 @@ export default function AdminDashboard() {
         }
     };
 
+    // Export data to CSV
+    const exportToCSV = (data, filename) => {
+        if (!data || !data.length) return;
+
+        const keys = Object.keys(data[0]);
+        const csvContent =
+            keys.join(',') +
+            '\n' +
+            data.map(row => keys.map(k => `"${row[k] ?? ''}"`).join(',')).join('\n');
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', `${filename}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     if (loading) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -83,7 +103,6 @@ export default function AdminDashboard() {
             <header className="bg-white shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
                     <div className="flex items-center">
-                        {/* <img src="/images/simdte-logo-hero.png" alt="SIMDTE" className="h-8 w-auto mr-3" /> */}
                         <h1 className="text-xl font-semibold text-gray-900">SIMDTE Admin Panel</h1>
                     </div>
                     <button
@@ -98,7 +117,7 @@ export default function AdminDashboard() {
             {/* Main Content */}
             <main className="max-w-8xl mx-20 py-4">
                 {/* Tabs */}
-                <div className="border-b border-gray-200 mb-8">
+                <div className="flex justify-between items-center mb-8 border-b border-gray-200">
                     <nav className="-mb-px flex space-x-8">
                         <button
                             onClick={() => setActiveTab('papers')}
@@ -119,6 +138,14 @@ export default function AdminDashboard() {
                             Registrations ({users.length})
                         </button>
                     </nav>
+                    <button
+                        onClick={() =>
+                            exportToCSV(activeTab === 'papers' ? papers : users, activeTab)
+                        }
+                        className="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors"
+                    >
+                        Export {activeTab === 'papers' ? 'Papers' : 'Registrations'}
+                    </button>
                 </div>
 
                 {/* Content */}
