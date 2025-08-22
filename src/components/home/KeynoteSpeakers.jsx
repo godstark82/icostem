@@ -115,6 +115,12 @@ const SPEAKERS = [
         country: "Egypt",
         img: "/images/speakers/dalia.jpg",
     },
+    {
+        name: "Dr Alok Bhargava",
+        affiliation: "Manipal University Jaipur, Rajasthan",
+        country: "India",
+        img: "/images/speakers/alok.jpg",
+    },
 ];
 
 function SpeakerCard({ speaker }) {
