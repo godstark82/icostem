@@ -67,12 +67,12 @@ const SPEAKERS = [
         country: "India",
         img: "images/speakers/anirudh-gupta.webp",
     },
-    {
-        name: "Dr. Chetali Agrawal",
-        affiliation: "Mewar University, Chittorgarh",
-        country: "India",
-        img: "https://picsum.photos/200",
-    },
+    // {
+    //     name: "Dr. Chetali Agrawal",
+    //     affiliation: "Mewar University, Chittorgarh",
+    //     country: "India",
+    //     img: "https://picsum.photos/200",
+    // },
     {
         name: "Prof. (Dr.) A. K. Saini",
         affiliation: "ICFAI University Jaipur",
