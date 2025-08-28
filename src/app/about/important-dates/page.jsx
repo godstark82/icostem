@@ -3,17 +3,17 @@ import AboutHeader from '../../../components/common/AboutHeader';
 const importantDates = [
     {
         event: "Paper Submission Deadline",
-        date: "15 August 2025",
+        date: "2 September 2025",
         rowClass: "bg-white"
     },
     {
         event: "Notification of Acceptance",
-        date: "20 August 2025",
+        date: "4 September 2025",
         rowClass: "bg-gray-50"
     },
     {
         event: "Registration Deadline",
-        date: "21 August 2025",
+        date: "5 September 2025",
         rowClass: "bg-white"
     },
     {

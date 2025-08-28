@@ -2,9 +2,9 @@ import SectionHeader from "../common/SectionHeader";
 import SectionImageHeader from "../common/SectionImageHeader";
 
 const DATES = [
-    { day: "15", month: "August", desc: "Paper Submission Deadline" },
-    { day: "20", month: "August", desc: "Notification of Acceptance" },
-    { day: "21", month: "August", desc: "Registration Deadline" },
+    { day: "2", month: "September", desc: "Paper Submission Deadline" },
+    { day: "4", month: "September", desc: "Notification of Acceptance" },
+    { day: "5", month: "September", desc: "Registration Deadline" },
     { day: "6-7", month: "September", desc: "Conference Dates" },
 ];
 
